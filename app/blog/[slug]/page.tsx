@@ -1,0 +1,314 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, Clock, Tag } from "lucide-react";
+import { getAllBlogPosts, getBlogPost } from "@/constants/blog-posts";
+
+export function generateStaticParams() {
+  return getAllBlogPosts().map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
+  if (!post) return {};
+
+  return {
+    title: `${post.title} | IPTV Canada Blog`,
+    description: post.excerpt,
+    keywords: [
+      post.category.toLowerCase(),
+      "IPTV Canada",
+      "IPTV guide",
+      ...post.title.toLowerCase().split(" ").filter((w) => w.length > 3),
+    ],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://yourdomain.ca/blog/${slug}`,
+      type: "article",
+      publishedTime: post.date,
+      siteName: "IPTV Canada",
+      authors: ["IPTV Canada"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
+    alternates: {
+      canonical: `https://yourdomain.ca/blog/${slug}`,
+    },
+  };
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  // Article JSON-LD schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: `https://yourdomain.ca/blog/${slug}`,
+    author: {
+      "@type": "Organization",
+      name: "IPTV Canada",
+      url: "https://yourdomain.ca",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "IPTV Canada",
+      url: "https://yourdomain.ca",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://yourdomain.ca/blog/${slug}`,
+    },
+    articleSection: post.category,
+    wordCount: post.content.split(/\s+/).length,
+  };
+
+  // BreadcrumbList schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://yourdomain.ca" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://yourdomain.ca/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://yourdomain.ca/blog/${slug}` },
+    ],
+  };
+
+  const renderContent = (content: string) => {
+    const lines = content.trim().split("\n");
+    const elements: React.ReactNode[] = [];
+    let inTable = false;
+    let tableRows: string[][] = [];
+    let tableHeader: string[] = [];
+
+    const flushTable = () => {
+      if (tableRows.length > 0) {
+        elements.push(
+          <div key={`table-${elements.length}`} className="overflow-x-auto my-8">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-slate-50">
+                  {tableHeader.map((cell, i) => (
+                    <th key={i} className="text-left px-4 py-3 font-bold text-brand-dark border border-slate-200">{cell.trim()}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {tableRows.map((row, ri) => (
+                  <tr key={ri} className={ri % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                    {row.map((cell, ci) => (
+                      <td key={ci} className="px-4 py-3 text-slate-600 border border-slate-200">{cell.trim()}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+        tableRows = [];
+        tableHeader = [];
+        inTable = false;
+      }
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      if (line.trim().startsWith("|") && line.trim().endsWith("|")) {
+        const cells = line.split("|").filter((c) => c.trim() !== "");
+        if (!inTable) {
+          inTable = true;
+          tableHeader = cells;
+        } else if (cells.every((c) => /^[-\s:]+$/.test(c.trim()))) {
+          continue;
+        } else {
+          tableRows.push(cells);
+        }
+        continue;
+      } else if (inTable) {
+        flushTable();
+      }
+
+      if (line.trim() === "") {
+        continue;
+      } else if (line.startsWith("## ")) {
+        elements.push(
+          <h2 key={i} className="text-2xl font-black text-brand-dark tracking-tight mt-12 mb-4">{line.replace("## ", "")}</h2>
+        );
+      } else if (line.startsWith("### ")) {
+        elements.push(
+          <h3 key={i} className="text-xl font-black text-brand-dark tracking-tight mt-8 mb-3">{line.replace("### ", "")}</h3>
+        );
+      } else if (line.startsWith("- **")) {
+        const match = line.match(/^- \*\*(.+?)\*\*:?\s*(.*)$/);
+        if (match) {
+          elements.push(
+            <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-2 shrink-0" />
+              <span><strong className="text-brand-dark">{match[1]}:</strong> {match[2]}</span>
+            </li>
+          );
+        }
+      } else if (line.startsWith("- ")) {
+        elements.push(
+          <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-2 shrink-0" />
+            <span>{line.replace("- ", "")}</span>
+          </li>
+        );
+      } else if (/^\d+\.\s/.test(line.trim())) {
+        const match = line.match(/^(\d+)\.\s(.+)$/);
+        if (match) {
+          elements.push(
+            <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
+              <span className="bg-brand-blue text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center mt-0.5 shrink-0">{match[1]}</span>
+              <span>{match[2]}</span>
+            </li>
+          );
+        }
+      } else {
+        elements.push(
+          <p key={i} className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">{line}</p>
+        );
+      }
+    }
+
+    flushTable();
+    return elements;
+  };
+
+  // Get related posts (same category, excluding current)
+  const relatedPosts = getAllBlogPosts()
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
+
+  return (
+    <main className="min-h-screen bg-white">
+      {/* JSON-LD Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Header */}
+      <header className="bg-brand-dark pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-blue/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-xs font-bold text-slate-500">
+              <li><Link href="/" className="hover:text-brand-blue transition-colors">Home</Link></li>
+              <li>/</li>
+              <li><Link href="/blog" className="hover:text-brand-blue transition-colors">Blog</Link></li>
+              <li>/</li>
+              <li className="text-slate-400 truncate max-w-[200px]">{post.title}</li>
+            </ol>
+          </nav>
+
+          <div className="flex items-center gap-3 mb-6">
+            <span className="flex items-center gap-1.5 bg-brand-blue/20 text-brand-blue text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+              <Tag size={10} />
+              {post.category}
+            </span>
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tighter leading-tight mb-6">
+            {post.title}
+          </h1>
+
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6 max-w-3xl">
+            {post.excerpt}
+          </p>
+
+          <div className="flex items-center gap-6 text-slate-500 text-xs font-semibold">
+            <span className="flex items-center gap-1.5">
+              <Clock size={14} />
+              {post.readTime}
+            </span>
+            <time dateTime={post.date}>
+              {new Date(post.date).toLocaleDateString("en-CA", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </time>
+          </div>
+        </div>
+      </header>
+
+      {/* Article Content */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="prose-custom">{renderContent(post.content)}</div>
+
+        {/* Internal Links: Related Articles */}
+        {relatedPosts.length > 0 && (
+          <nav aria-label="Related articles" className="mt-16 pt-8 border-t border-slate-100">
+            <h2 className="text-xl font-black text-brand-dark tracking-tighter mb-6">
+              Related Articles
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {relatedPosts.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  href={`/blog/${rp.slug}`}
+                  className="bg-slate-50 border border-slate-100 rounded-xl p-5 hover:shadow-md hover:border-slate-200 transition-all group"
+                >
+                  <span className="text-[10px] font-black uppercase tracking-widest text-brand-blue">{rp.category}</span>
+                  <h3 className="text-sm font-black text-brand-dark tracking-tight mt-2 leading-snug group-hover:text-brand-blue transition-colors">
+                    {rp.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        {/* CTA */}
+        <div className="mt-12 pt-8 border-t border-slate-100">
+          <div className="bg-gradient-to-br from-brand-dark to-slate-900 rounded-3xl p-8 sm:p-12 text-center">
+            <h2 className="text-2xl font-black text-white tracking-tighter mb-4">
+              Ready to Try IPTV Canada?
+            </h2>
+            <p className="text-slate-400 text-sm mb-8 max-w-lg mx-auto">
+              Get access to 25,000+ channels with our free trial. No commitment
+              required.
+            </p>
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+              <Link
+                href="/pricing"
+                className="bg-brand-blue hover:bg-blue-700 text-white font-black px-8 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all shadow-lg shadow-brand-blue/20"
+              >
+                View Plans
+              </Link>
+              <Link
+                href="/blog"
+                className="bg-white/10 hover:bg-white/20 text-white font-black px-8 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all border border-white/10"
+              >
+                More Articles
+              </Link>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  );
+}
