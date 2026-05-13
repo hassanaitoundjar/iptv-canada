@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/constants/blog-posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yourdomain.ca";
+  const baseUrl = "https://iptvv.ca";
 
   // Static routes
   const staticRoutes = [

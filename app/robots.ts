@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/checkout", "/api/"],
     },
-    sitemap: "https://yourdomain.ca/sitemap.xml",
+    sitemap: "https://iptvv.ca/sitemap.xml",
   };
 }

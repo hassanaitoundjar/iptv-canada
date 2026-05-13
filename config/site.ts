@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "IPTV Canada",
   description: "Canada's #1 IPTV service — 25,000+ channels, 120,000+ movies, 4K quality.",
-  url: "https://yourdomain.ca",
+  url: "https://iptvv.ca",
   trialUrl: "/checkout?plan=Trial&devices=1 Device",
-  supportEmail: "support@yourdomain.ca",
-  whatsapp: "+1 (xxx) xxx-xxxx",
+  supportEmail: "support@iptvv.ca",
+  whatsapp: "+1 345-431-6917",
 
   nav: [
     { label: "Home",               href: "/" },
@@ -16,6 +16,6 @@ export const siteConfig = {
   ],
 
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE_HERE",
+    google: "1Fg-cQNjg2eJcW2tKJyO1kf7HjviqIaUELPB8JW0He8",
   },
 };

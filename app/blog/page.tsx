@@ -20,9 +20,17 @@ export const metadata: Metadata = {
     title: "IPTV Blog — Guides, Setup Tutorials & News | IPTV Canada",
     description:
       "Expert IPTV guides, setup tutorials, app reviews, troubleshooting tips, and industry news for Canadian IPTV users.",
-    url: "https://yourdomain.ca/blog",
+    url: "https://iptvv.ca/blog",
     type: "website",
     siteName: "IPTV Canada",
+    images: [
+      {
+        url: "/images/blog-og.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV Canada Blog",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -31,7 +39,7 @@ export const metadata: Metadata = {
       "Expert IPTV guides, setup tutorials, app reviews and troubleshooting tips.",
   },
   alternates: {
-    canonical: "https://yourdomain.ca/blog",
+    canonical: "https://iptvv.ca/blog",
   },
 };
 
@@ -47,18 +55,18 @@ export default function BlogPage() {
     name: "IPTV Canada Blog",
     description:
       "Expert guides, setup tutorials, app reviews, and troubleshooting tips for IPTV users in Canada.",
-    url: "https://yourdomain.ca/blog",
+    url: "https://iptvv.ca/blog",
     publisher: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://yourdomain.ca",
+      url: "https://iptvv.ca",
     },
     blogPost: allPosts.map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,
-      url: `https://yourdomain.ca/blog/${post.slug}`,
+      url: `https://iptvv.ca/blog/${post.slug}`,
       author: {
         "@type": "Organization",
         name: "IPTV Canada",

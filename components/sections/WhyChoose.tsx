@@ -26,13 +26,13 @@ export function WhyChoose() {
 
         {/* Heading */}
         <h2 className="text-4xl sm:text-6xl font-black text-white mb-12 tracking-tighter">
-          Why Choose Iptvv.Ca?
+          Why Choose IPTV Canada?
         </h2>
 
         {/* Content Blocks */}
         <div className="space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mx-auto font-medium">
           <p>
-            At IPTVV.ca, we&apos;re recognized as the best IPTV in Canada, delivering premium streaming excellence for over 15 years. 
+            At IPTV Canada, we&apos;re recognized as the best IPTV in Canada, delivering premium streaming excellence for over 15 years. 
             Our IPTV service combines superior technology with unmatched reliability, featuring 99.9% guaranteed uptime 
             and zero-buffering streaming across all devices.
           </p>
@@ -52,7 +52,7 @@ export function WhyChoose() {
 
           <p className="text-white font-bold">
             We guarantee immediate activation, no long-term contracts, and transparent pricing with no hidden fees. 
-            Join the growing community of satisfied customers who&apos;ve discovered why IPTVV.ca remains 
+            Join the growing community of satisfied customers who&apos;ve discovered why IPTV Canada remains 
             Canada&apos;s top-rated IPTV provider for reliability, quality, and customer service excellence.
           </p>
         </div>

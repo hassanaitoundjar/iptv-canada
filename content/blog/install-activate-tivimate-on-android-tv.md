@@ -5,6 +5,7 @@ category: "Guides"
 excerpt: "Learn how to install and activate TiViMate, the best IPTV player for Android TV. This step-by-step guide covers installation and premium activation."
 featured: false
 readTime: "12 min read"
+canonical: "https://iptvv.ca/blog/install-activate-tivimate-on-android-tv"
 ---
 
 TiViMate is widely regarded as the best IPTV player for Android TV and Firestick devices. Its sleek, cable-like interface and advanced features make it the top choice for anyone looking to get the most out of their **IPTV Canada** subscription. In this guide, we’ll show you how to quickly install and activate TiViMate on your device.
@@ -34,7 +35,7 @@ Once TiViMate is installed, it’s time to connect your service. We recommend us
 
 1. Open TiViMate and click **Add Playlist**.
 2. Select **Xtream Codes**.
-3. Enter the **Server URL**, **Username**, and **Password** provided in your [IPTV Canada activation email](https://yourdomain.ca/pricing).
+3. Enter the **Server URL**, **Username**, and **Password** provided in your [IPTV Canada activation email](https://iptvv.ca/pricing).
 4. Click **Next** and wait for your channels and EPG to load.
 
 ## Step 4: Activate TiViMate Premium (Optional)
@@ -46,7 +47,7 @@ While the free version is great, TiViMate Premium unlocks features like multi-sc
 ## Troubleshooting Tips
 - **Channels not loading**: Double-check your login credentials and ensure your internet speed is at least 50 Mbps.
 - **EPG is empty**: Go to Settings > Playlists > [Your Playlist] > EPG and click **Update EPG**.
-- **Buffering**: Use an [Ethernet connection](https://yourdomain.ca/blog/iptv-canada-complete-guide-internet-television-2026) for maximum stability.
+- **Buffering**: Use an [Ethernet connection](https://iptvv.ca/blog/iptv-canada-complete-guide-internet-television-2026) for maximum stability.
 
 ---
 
@@ -58,6 +59,7 @@ Yes, for Android TV users, TiViMate offers a much smoother and more professional
 ### Q: Does it work on Firestick?
 Absolutely. Follow the same "Downloader" steps to get TiViMate on any Amazon Fire TV device.
 
+canonical: "https://iptvv.ca/blog/install-activate-tivimate-on-android-tv"
 ---
 
-**Ready to upgrade your viewing experience? [Check our IPTV plans](https://yourdomain.ca/pricing) that are fully compatible with TiViMate!**
+**Ready to upgrade your viewing experience? [Check our IPTV plans](https://iptvv.ca/pricing) that are fully compatible with TiViMate!**

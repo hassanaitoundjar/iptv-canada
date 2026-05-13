@@ -8,7 +8,7 @@ export const faqData = [
     answer: "Our Premium IPTV uses high-speed servers and advanced compression technology to deliver 4K and HD content with minimal buffering. Once you subscribe, you receive a unique link or login for your preferred IPTV player."
   },
   {
-    question: "Supported devices for IPTVV.ca?",
+    question: "Supported devices for IPTV Canada?",
     answer: "We support a wide range of devices including Amazon Firestick, Android Boxes, Smart TVs (Samsung, LG, Sony), Apple TV, iOS devices, Android phones, and PC/Mag boxes."
   },
   {
@@ -28,11 +28,11 @@ export const faqData = [
     answer: "The setup process varies by device but generally involves: 1. Installing a recommended IPTV player. 2. Entering your M3U link or Xtream Codes. 3. Enjoying your content! We provide detailed guides for every device."
   },
   {
-    question: "IPTVV.ca customer support response time?",
+    question: "IPTV Canada customer support response time?",
     answer: "Our dedicated Canadian support team typically responds within 30-60 minutes during business hours. We offer 24/7 technical monitoring to ensure your service stays up."
   },
   {
-    question: "Why choose IPTVV.ca as IPTV provider?",
+    question: "Why choose IPTV Canada as IPTV provider?",
     answer: "We offer the most stable servers in Canada, 25,000+ local and international channels, 4K streaming quality, and a user-friendly setup that works on all your favorite devices."
   },
   {

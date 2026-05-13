@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "DMCA Notice | IPTV Canada",
   description: "DMCA Notice and takedown policy for IPTV Canada services.",
+  robots: { index: false, follow: false },
 };
 
 export default function DMCAPage() {
@@ -68,7 +69,7 @@ export default function DMCAPage() {
             
             <div className="bg-brand-dark rounded-2xl p-8 text-white inline-block">
               <p className="font-black text-brand-blue uppercase tracking-widest text-[10px] mb-2">Email Address</p>
-              <p className="text-xl font-bold">dmca@iptvcanada.ca</p>
+              <p className="text-xl font-bold">support@iptvv.ca</p>
             </div>
             
             <p className="mt-12 text-sm text-slate-400 italic">

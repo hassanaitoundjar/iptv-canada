@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | IPTV Canada",
   description: "Learn how IPTV Canada protects and manages your personal data.",
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
@@ -76,7 +77,7 @@ export default function PrivacyPage() {
             
             <div className="bg-brand-dark rounded-2xl p-8 text-white inline-block">
               <p className="font-black text-brand-blue uppercase tracking-widest text-[10px] mb-2">Support Email</p>
-              <p className="text-xl font-bold">privacy@iptvcanada.ca</p>
+              <p className="text-xl font-bold">support@iptvv.ca</p>
             </div>
             
             <p className="mt-12 text-xs text-slate-400 font-bold uppercase tracking-widest">

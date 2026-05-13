@@ -23,7 +23,7 @@ export function Footer() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white leading-none tracking-tighter">IPTVV</span>
+                <span className="text-2xl font-black text-white leading-none tracking-tighter">IPTV</span>
                 <span className="text-[10px] font-bold tracking-[4px] uppercase text-brand-blue -mt-0.5">Canada</span>
               </div>
             </Link>

@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "IPTV Subscription Plans Canada — 25,000+ Channels",
   description: "Affordable IPTV subscription plans for Canada. 4K quality, 25,000+ channels, and instant activation. No contracts, 24/7 Canadian support.",
-  keywords: ["IPTV subscription Canada", "cheap IPTV Canada", "best IPTV 2025", "IPTV trial Canada", "monthly IPTV subscription"],
+  keywords: ["IPTV subscription Canada", "cheap IPTV Canada", "best IPTV 2026", "IPTV trial Canada", "monthly IPTV subscription"],
 };
 
 export default function PricingPage() {

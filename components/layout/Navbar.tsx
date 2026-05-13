@@ -34,7 +34,7 @@ export function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-[900] text-brand-blue leading-none tracking-tighter">IPTVV</span>
+              <span className="text-xl sm:text-2xl font-[900] text-brand-blue leading-none tracking-tighter">IPTV</span>
               <span className="text-[8px] sm:text-[10px] font-bold tracking-[2px] sm:tracking-[4px] uppercase text-slate-800 -mt-0.5">Canada</span>
             </div>
           </Link>

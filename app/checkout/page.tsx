@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Secure Checkout | IPTV Canada",
   description: "Complete your IPTV subscription for high-quality Canadian TV. Fast activation via WhatsApp.",
-  robots: { index: false, follow: true }, // Don't index checkout page
+  robots: { index: false, follow: false }, // Private page
 };
 
 export default function CheckoutPage() {

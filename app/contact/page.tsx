@@ -20,7 +20,7 @@ export default function ContactPage() {
       "name": "IPTV Canada",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "support@yourdomain.ca",
+        "email": "support@iptvv.ca",
         "contactType": "customer service",
         "availableLanguage": "English"
       }
