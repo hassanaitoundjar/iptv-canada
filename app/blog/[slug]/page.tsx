@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://iptvv.ca/blog/${slug}`,
+      url: `https://iptv-canada-dun.vercel.app/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://iptvv.ca/blog/${slug}`,
+      canonical: `https://iptv-canada-dun.vercel.app/blog/${slug}`,
     },
   };
 }
@@ -66,20 +66,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    url: `https://iptvv.ca/blog/${slug}`,
+    url: `https://iptv-canada-dun.vercel.app/blog/${slug}`,
     author: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://iptvv.ca",
+      url: "https://iptv-canada-dun.vercel.app",
     },
     publisher: {
       "@type": "Organization",
       name: "IPTV Canada",
-      url: "https://iptvv.ca",
+      url: "https://iptv-canada-dun.vercel.app",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://iptvv.ca/blog/${slug}`,
+      "@id": `https://iptv-canada-dun.vercel.app/blog/${slug}`,
     },
     articleSection: post.category,
     wordCount: post.content.split(/\s+/).length,
@@ -90,9 +90,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptvv.ca" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://iptvv.ca/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://iptvv.ca/blog/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptv-canada-dun.vercel.app" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://iptv-canada-dun.vercel.app/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://iptv-canada-dun.vercel.app/blog/${slug}` },
     ],
   };
 

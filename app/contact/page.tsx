@@ -20,7 +20,7 @@ export default function ContactPage() {
       "name": "IPTV Canada",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "support@iptvv.ca",
+        "email": "support@iptv-canada-dun.vercel.app",
         "contactType": "customer service",
         "availableLanguage": "English"
       }

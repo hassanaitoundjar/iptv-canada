@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Experience premium IPTV in Canada with 25,000+ live channels, 120,000+ VODs, and 4K quality. Fast activation, local support, and no contracts.",
   keywords: ["best IPTV Canada", "IPTV Smarters Canada", "IPTV subscription", "4K IPTV", "IPTV reseller", "Canadian IPTV service"],
   alternates: {
-    canonical: "https://iptvv.ca",
+    canonical: "https://iptv-canada-dun.vercel.app",
   },
 };
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | IPTV Canada"
   },
   description: "Experience the best IPTV Canada service with 25,000+ live channels, 4K sports (NHL/NFL), and 120,000+ VODs. Start your 24-hour free trial now!",
-  metadataBase: new URL("https://iptvv.ca"),
+  metadataBase: new URL("https://iptv-canada-dun.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IPTV Canada — #1 Premium IPTV Subscription in Canada 2026",
     description: "Canada's most reliable IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
-    url: "https://iptvv.ca",
+    url: "https://iptv-canada-dun.vercel.app",
     siteName: "IPTV Canada",
     locale: "en_CA",
     type: "website",
@@ -56,8 +56,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "IPTV Canada",
-              "url": "https://iptvv.ca",
-              "logo": "https://iptvv.ca/logo.png",
+              "url": "https://iptv-canada-dun.vercel.app",
+              "logo": "https://iptv-canada-dun.vercel.app/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": siteConfig.whatsapp,
@@ -75,10 +75,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "IPTV Canada",
-              "url": "https://iptvv.ca",
+              "url": "https://iptv-canada-dun.vercel.app",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://iptvv.ca/blog?q={search_term_string}",
+                "target": "https://iptv-canada-dun.vercel.app/blog?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
