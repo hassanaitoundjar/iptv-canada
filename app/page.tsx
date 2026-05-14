@@ -10,13 +10,13 @@ import { Reseller } from "@/components/sections/Reseller";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import type { Metadata } from "next";
 import { faqData } from "@/constants/faq";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "IPTV Canada — #1 Best IPTV Subscription Service 2026",
   description: "Experience premium IPTV in Canada with 25,000+ live channels, 120,000+ VODs, and 4K quality. Fast activation, local support, and no contracts.",
-  keywords: ["best IPTV Canada", "IPTV Smarters Canada", "IPTV subscription", "4K IPTV", "IPTV reseller", "Canadian IPTV service"],
   alternates: {
-    canonical: "https://iptv-canada-dun.vercel.app",
+    canonical: siteConfig.url,
   },
 };
 
@@ -24,30 +24,49 @@ export default function Home() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.map((item) => ({
+    mainEntity: faqData.map((item) => ({
       "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
+      name: item.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": item.answer
-      }
-    }))
+        text: item.answer,
+      },
+    })),
+  };
+
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "IPTV Canada Subscription Plans",
+    image: `${siteConfig.url}/logo.png`,
+    description: "Premium IPTV subscription with 25,000+ live channels, 4K streaming, and 24/7 Canadian support.",
+    brand: { "@type": "Brand", name: "IPTV Canada" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "38", // ✅ use your real number
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "CAD",
+      lowPrice: "15.00",
+      highPrice: "120.00",
+      offerCount: "12",
+    },
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
       <Hero />
       <Sports />
       <Devices />
+      <Pricing />
       <ComparisonSection />
       <Steps />
       <WhyChoose />
       <Testimonials />
-      <Pricing />
       <Reseller />
       <FAQ />
     </>

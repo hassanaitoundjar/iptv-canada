@@ -24,7 +24,7 @@ This means you can watch your favourite Canadian and international channels on:
 - Computers and laptops
 - MAG boxes
 
-canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-get-iptv-in-canada"
+For a more basic introduction, see our [what is IPTV guide](https://iptv-canada-dun.vercel.app/blog/what-is-iptv-beginners-guide-canada).
 ---
 
 ## Why Canadians Are Switching to IPTV
@@ -82,8 +82,6 @@ Once you have your subscription credentials, setup is straightforward:
 ### Step 4: Use a VPN (Optional but Recommended)
 
 Using a VPN with IPTV adds a layer of privacy and can improve streaming stability. A good VPN also protects your data from your ISP. Popular choices include NordVPN and ExpressVPN.
-
-canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-get-iptv-in-canada"
 ---
 
 ## What Canadian Channels Can I Get with IPTV?
@@ -91,8 +89,7 @@ canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-get-iptv-in-canada"
 A good IPTV Canada subscription should include:
 
 | Category | Channels |
-|---|canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-get-iptv-in-canada"
----|
+|---|---|
 | News | CBC News, CTV News, CP24, Global News |
 | Sports | TSN 1–5, Sportsnet, RDS, NHL Network |
 | Entertainment | CTV, Global, Citytv, Slice, W Network |
@@ -102,11 +99,7 @@ A good IPTV Canada subscription should include:
 
 ---
 
-## Is IPTV Legal in Canada?
-
-This is one of the most common questions. **Licensed IPTV services** that have permission to broadcast the content they offer are completely legal. Always choose a provider that operates transparently and complies with Canadian broadcasting laws.
-
-canonical: "https://iptv-canada-dun.vercel.app/blog/how-to-get-iptv-in-canada"
+This is one of the most common questions. **Licensed IPTV services** that have permission to broadcast the content they offer are completely legal. Always choose a provider that operates transparently and complies with Canadian broadcasting laws. For more details, read our full article on [is IPTV legal in Canada](https://iptv-canada-dun.vercel.app/blog/is-iptv-legal-in-canada).
 ---
 
 ## Ready to Get Started?

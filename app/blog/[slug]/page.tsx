@@ -3,6 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { getAllBlogPosts, getBlogPost } from "@/constants/blog-posts";
+import Image from "next/image";
+
+export const revalidate = 3600; // revalidate every hour
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }));
@@ -178,6 +181,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <span>{line.replace("- ", "")}</span>
           </li>
         );
+      } else if (line.trim().startsWith("![")) {
+        const match = line.match(/!\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          elements.push(
+            <div key={i} className="relative w-full aspect-video my-8 rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+              <Image 
+                src={match[2]} 
+                alt={match[1] || "IPTV Canada Blog Image"}
+                fill
+                className="object-cover"
+                sizes="(max-w-4xl) 100vw, 800px"
+              />
+            </div>
+          );
+        }
       } else if (/^\d+\.\s/.test(line.trim())) {
         const match = line.match(/^(\d+)\.\s(.+)$/);
         if (match) {
