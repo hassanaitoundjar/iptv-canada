@@ -112,7 +112,7 @@ For smooth IPTV streaming from Canada:
 | FHD (1080p) | 15–25 Mbps |
 | 4K Ultra HD | 25–50 Mbps |
 
-Most modern broadband connections worldwide can easily handle HD streaming.
+Most modern broadband connections worldwide can easily handle HD streaming. You can test your current connection speed at [Speedtest.net](https://www.speedtest.net/) before subscribing.
 
 ---
 

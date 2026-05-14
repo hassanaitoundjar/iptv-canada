@@ -20,7 +20,7 @@ IPTV is simply a technology — a method of delivering television over the inter
 
 ### Legal IPTV Services:
 - Have licensing agreements with broadcasters and content owners
-- Comply with Canadian Radio-television and Telecommunications Commission (CRTC) regulations
+- Comply with [Canadian Radio-television and Telecommunications Commission (CRTC)](https://crtc.gc.ca/) regulations
 - Are transparent about who operates them and how to contact them
 - Charge fair market prices and accept standard payment methods
 
