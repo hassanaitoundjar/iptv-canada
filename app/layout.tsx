@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Experience the best IPTV Canada service with 25,000+ live channels, 4K sports (NHL/NFL), and 120,000+ VODs. Start your 24-hour free trial now!",
   metadataBase: new URL("https://iptv-canada-dun.vercel.app"),
   alternates: {
-    canonical: "/",
+    canonical: siteConfig.url,
   },
   verification: {
     google: siteConfig.verification.google,

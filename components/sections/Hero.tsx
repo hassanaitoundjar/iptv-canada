@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShoppingCart, Tv, Users, Film, Award, Radio } from "lucide-react";
 
@@ -14,19 +15,39 @@ export function Hero() {
               <div className="absolute inset-0 rounded-full overflow-hidden grid grid-cols-2 grid-rows-2 gap-1 border-4 border-white shadow-2xl">
                 {/* Segment 1: Top Left */}
                 <div className="bg-slate-200 relative overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=400')] bg-cover bg-center" />
+                   <Image 
+                    src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=400" 
+                    alt="Family watching TV in a modern living room"
+                    fill
+                    className="object-cover"
+                   />
                 </div>
                 {/* Segment 2: Top Right */}
                 <div className="bg-slate-300 relative overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593784991095-a205039470b6?auto=format&fit=crop&q=80&w=400')] bg-cover bg-center" />
+                   <Image 
+                    src="https://images.unsplash.com/photo-1593784991095-a205039470b6?auto=format&fit=crop&q=80&w=400" 
+                    alt="Close up of a 4K TV screen showing a movie"
+                    fill
+                    className="object-cover"
+                   />
                 </div>
                 {/* Segment 3: Bottom Left */}
                 <div className="bg-slate-400 relative overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=400')] bg-cover bg-center" />
+                   <Image 
+                    src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=400" 
+                    alt="Sports fan cheering at a live game on TV"
+                    fill
+                    className="object-cover"
+                   />
                 </div>
                 {/* Segment 4: Bottom Right */}
                 <div className="bg-slate-500 relative overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508919892463-013983ec5a19?auto=format&fit=crop&q=80&w=400')] bg-cover bg-center" />
+                   <Image 
+                    src="https://images.unsplash.com/photo-1508919892463-013983ec5a19?auto=format&fit=crop&q=80&w=400" 
+                    alt="Home theater setup with high quality streaming"
+                    fill
+                    className="object-cover"
+                   />
                 </div>
               </div>
 
@@ -82,7 +103,7 @@ export function Hero() {
               className="inline-flex items-center gap-3 bg-brand-blue hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl transition-all shadow-2xl shadow-brand-blue/30 active:scale-95 text-lg uppercase tracking-wider"
             >
               <ShoppingCart size={24} />
-              Chose A Plan
+              Choose A Plan
             </Link>
           </div>
         </div>

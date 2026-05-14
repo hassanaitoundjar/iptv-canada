@@ -28,7 +28,7 @@ export function Testimonials() {
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tighter">
-            Customers Experience With Iptvv.Ca
+            Customers Experience With IPTV Canada
           </h2>
         </div>
 
