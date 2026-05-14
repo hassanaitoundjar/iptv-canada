@@ -59,7 +59,7 @@ Yes, for Android TV users, TiViMate offers a much smoother and more professional
 ### Q: Does it work on Firestick?
 Absolutely. Follow the same "Downloader" steps to get TiViMate on any Amazon Fire TV device.
 
-canonical: "https://iptv-canada-dun.vercel.app/blog/install-activate-tivimate-on-android-tv"
+
 ---
 
 **Ready to upgrade your viewing experience? [Check our IPTV plans](https://iptv-canada-dun.vercel.app/pricing) that are fully compatible with TiViMate!**

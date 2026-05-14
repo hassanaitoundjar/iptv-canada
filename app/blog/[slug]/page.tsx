@@ -100,6 +100,38 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   const renderContent = (content: string) => {
+    const parseInlineMarkdown = (text: string) => {
+      // Split by links [text](url) and bold **text**
+      const parts = text.split(/(\[.*?\]\(.*?\))|(\*\*.*?\*\*)/g);
+      return parts.map((part, index) => {
+        if (!part) return null;
+        
+        // Check for link [text](url)
+        const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+        if (linkMatch) {
+          const isExternal = linkMatch[2].startsWith('http');
+          return (
+            <Link 
+              key={index} 
+              href={linkMatch[2]} 
+              className="text-brand-blue font-bold hover:underline transition-all"
+              {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              {linkMatch[1]}
+            </Link>
+          );
+        }
+        
+        // Check for bold **text**
+        const boldMatch = part.match(/^\*\*(.*?)\*\*$/);
+        if (boldMatch) {
+          return <strong key={index} className="text-brand-dark font-black">{boldMatch[1]}</strong>;
+        }
+        
+        return part;
+      });
+    };
+
     const lines = content.trim().split("\n");
     const elements: React.ReactNode[] = [];
     let inTable = false;
@@ -114,7 +146,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <thead>
                 <tr className="bg-slate-50">
                   {tableHeader.map((cell, i) => (
-                    <th key={i} className="text-left px-4 py-3 font-bold text-brand-dark border border-slate-200">{cell.trim()}</th>
+                    <th key={i} className="text-left px-4 py-3 font-bold text-brand-dark border border-slate-200">{parseInlineMarkdown(cell.trim())}</th>
                   ))}
                 </tr>
               </thead>
@@ -122,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {tableRows.map((row, ri) => (
                   <tr key={ri} className={ri % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
                     {row.map((cell, ci) => (
-                      <td key={ci} className="px-4 py-3 text-slate-600 border border-slate-200">{cell.trim()}</td>
+                      <td key={ci} className="px-4 py-3 text-slate-600 border border-slate-200">{parseInlineMarkdown(cell.trim())}</td>
                     ))}
                   </tr>
                 ))}
@@ -158,11 +190,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         continue;
       } else if (line.startsWith("## ")) {
         elements.push(
-          <h2 key={i} className="text-2xl font-black text-brand-dark tracking-tight mt-12 mb-4">{line.replace("## ", "")}</h2>
+          <h2 key={i} className="text-2xl font-black text-brand-dark tracking-tight mt-12 mb-4">{parseInlineMarkdown(line.replace("## ", ""))}</h2>
         );
       } else if (line.startsWith("### ")) {
         elements.push(
-          <h3 key={i} className="text-xl font-black text-brand-dark tracking-tight mt-8 mb-3">{line.replace("### ", "")}</h3>
+          <h3 key={i} className="text-xl font-black text-brand-dark tracking-tight mt-8 mb-3">{parseInlineMarkdown(line.replace("### ", ""))}</h3>
         );
       } else if (line.startsWith("- **")) {
         const match = line.match(/^- \*\*(.+?)\*\*:?\s*(.*)$/);
@@ -170,7 +202,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           elements.push(
             <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
               <div className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-2 shrink-0" />
-              <span><strong className="text-brand-dark">{match[1]}:</strong> {match[2]}</span>
+              <span><strong className="text-brand-dark">{parseInlineMarkdown(match[1])}:</strong> {parseInlineMarkdown(match[2])}</span>
             </li>
           );
         }
@@ -178,7 +210,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         elements.push(
           <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
             <div className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-2 shrink-0" />
-            <span>{line.replace("- ", "")}</span>
+            <span>{parseInlineMarkdown(line.replace("- ", ""))}</span>
           </li>
         );
       } else if (line.trim().startsWith("![")) {
@@ -202,13 +234,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           elements.push(
             <li key={i} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed ml-4 mb-2">
               <span className="bg-brand-blue text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center mt-0.5 shrink-0">{match[1]}</span>
-              <span>{match[2]}</span>
+              <span>{parseInlineMarkdown(match[2])}</span>
             </li>
           );
         }
       } else {
         elements.push(
-          <p key={i} className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">{line}</p>
+          <p key={i} className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">{parseInlineMarkdown(line)}</p>
         );
       }
     }

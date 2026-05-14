@@ -44,7 +44,7 @@ export default function Home() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "38", // ✅ use your real number
+      reviewCount: "130", 
     },
     offers: {
       "@type": "AggregateOffer",
