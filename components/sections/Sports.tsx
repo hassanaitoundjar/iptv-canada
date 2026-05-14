@@ -75,7 +75,6 @@ export function Sports() {
                 width={800} 
                 height={800} 
                 className="w-full h-auto drop-shadow-2xl"
-                priority
               />
               {/* Floating "LIVE 4K" Badge */}
               <div className="absolute top-[15%] right-[5%] bg-white px-4 py-2 rounded-full shadow-xl flex items-center gap-2 border border-slate-100 animate-bounce">

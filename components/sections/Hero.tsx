@@ -19,7 +19,9 @@ export function Hero() {
                     src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=400" 
                     alt="Family watching TV in a modern living room"
                     fill
+                    priority
                     className="object-cover"
+                    sizes="(max-w-7xl) 25vw, 225px"
                    />
                 </div>
                 {/* Segment 2: Top Right */}
@@ -29,6 +31,7 @@ export function Hero() {
                     alt="Close up of a 4K TV screen showing a movie"
                     fill
                     className="object-cover"
+                    sizes="(max-w-7xl) 25vw, 225px"
                    />
                 </div>
                 {/* Segment 3: Bottom Left */}
@@ -38,6 +41,7 @@ export function Hero() {
                     alt="Sports fan cheering at a live game on TV"
                     fill
                     className="object-cover"
+                    sizes="(max-w-7xl) 25vw, 225px"
                    />
                 </div>
                 {/* Segment 4: Bottom Right */}
@@ -47,6 +51,7 @@ export function Hero() {
                     alt="Home theater setup with high quality streaming"
                     fill
                     className="object-cover"
+                    sizes="(max-w-7xl) 25vw, 225px"
                    />
                 </div>
               </div>
