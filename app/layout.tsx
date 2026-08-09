@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -135,6 +136,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
