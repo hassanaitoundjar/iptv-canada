@@ -86,6 +86,27 @@ const nextConfig: NextConfig = {
         destination: "/about",
         permanent: true,
       },
+      // ── Legacy WooCommerce & Other Specific Old URLs ──────────────
+      {
+        source: "/product/:path*",
+        destination: "/pricing",
+        permanent: true,
+      },
+      {
+        source: "/uncategorized/:path*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/adult-content",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/blog/articles/:path*",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 
