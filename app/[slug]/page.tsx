@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!city) return {};
 
   const title = `IPTV ${city.name} | Best Canadian IPTV Service 2026`;
-  const description = `Looking for the best IPTV service in ${city.name}, ${city.province}? Stream 25,000+ channels, live sports (${city.team}), and movies in 4K. Buffer-free on ${city.isp.join(", ")}.`;
+  const description = `Looking for the premium IPTV service in ${city.name}, ${city.province}? Stream 25,000+ channels, live sports (${city.team}), and movies in 4K. Buffer-free on ${city.isp.join(", ")}.`;
 
   return {
     title,
@@ -84,12 +84,12 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-6 leading-tight">
-              Best IPTV Service in <br className="hidden sm:block" />
+              premium IPTV service in <br className="hidden sm:block" />
               <span className="text-brand-blue">{city.name}, {city.province}</span>
             </h1>
             
             <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-medium mb-10">
-              Cut the cord in {city.name} with Canada&apos;s most reliable premium IPTV network. 
+              Cut the cord in {city.name} with Canada&apos;s premium IPTV network. 
               Enjoy 25,000+ live channels, local {city.province} news, and live sports featuring the {city.team} in stunning 4K.
             </p>
 

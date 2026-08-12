@@ -4,7 +4,7 @@ export const testimonials = [
     location: "Toronto, ON",
     date: "Jul 14, 2026",
     rating: 5,
-    text: "The streaming quality is exceptional, and customer support is always there when needed. Over 25,000 channels, zero buffering, and incredible VOD selection. Best IPTV service I've found in Canada.",
+    text: "The streaming quality is exceptional, and customer support is always there when needed. Over 25,000 channels, zero buffering, and incredible VOD selection. premium IPTV service I've found in Canada.",
   },
   {
     name: "Sarah J.",

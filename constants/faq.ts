@@ -40,9 +40,9 @@ export const faqData = [
     longAnswer: "We pride ourselves on providing the best customer service in the industry. Unlike many international providers who take days to respond to an email, our support team is based in Canada and available via live chat, WhatsApp, and email. While our typical response time is under an hour, critical technical issues are handled immediately by our 24/7 network monitoring team. If you ever experience a server outage, need help configuring a new device, or have questions about a specific sports broadcast, our knowledgeable staff is always ready to assist you promptly and professionally."
   },
   {
-    question: "Why choose IPTV Canada as IPTV provider?",
-    answer: "We offer the most stable servers in Canada, 25,000+ local and international channels, 4K streaming quality, and a user-friendly setup that works on all your favorite devices.",
-    longAnswer: "Choosing the right IPTV provider comes down to reliability and content. We have heavily invested in enterprise-grade servers strategically located across North America to ensure our Canadian customers experience zero latency and virtually no buffering. Furthermore, our channel curation is unmatched: we don't just offer thousands of random channels; we carefully maintain regional Canadian networks, premium UK and US feeds, and dedicated sports packages. Our Anti-Freeze Technology ensures a smooth 60fps experience for live sports, making us the clear choice for viewers who demand premium quality."
+    question: "Why choose our IPTV service?",
+    answer: "We offer highly stable servers, 25,000+ local and international channels, 4K streaming quality, and a user-friendly setup that works on all your favorite devices.",
+    longAnswer: "Choosing the right IPTV provider comes down to reliability and content. We have invested in enterprise-grade servers strategically located across North America to ensure our Canadian customers experience minimal latency and smooth streaming. Our channel curation is carefully maintained to include regional Canadian networks, premium UK and US feeds, and dedicated sports packages. Our infrastructure supports a smooth 60fps experience for live sports, making it a reliable choice for viewers who demand consistent quality."
   },
   {
     question: "Is IPTV Legal in Canada?",
@@ -76,8 +76,8 @@ export const faqData = [
   },
   {
     question: "What happens if my IPTV service goes down during a big game?",
-    answer: "We maintain a 99.9% uptime with redundant backup servers. In the rare event of an outage, our technical team automatically reroutes traffic to ensure continuous playback.",
-    longAnswer: "We understand that missing a crucial goal or touchdown is frustrating, which is why we've heavily invested in server redundancy. Instead of relying on a single data center, our network is distributed across multiple high-capacity hubs. If one server experiences issues or becomes overloaded during a massive sporting event, our intelligent load balancers instantly and seamlessly migrate active connections to healthy backup servers. This redundant architecture guarantees a 99.9% uptime, ensuring your big game viewing party is never interrupted by technical failures."
+    answer: "We maintain highly reliable uptime with redundant backup servers. In the rare event of an outage, our technical team automatically reroutes traffic to ensure continuous playback.",
+    longAnswer: "We understand that missing a crucial goal or touchdown is frustrating, which is why we've invested in server redundancy. Instead of relying on a single data center, our network is distributed across multiple high-capacity hubs. If one server experiences issues or becomes overloaded during a massive sporting event, our load balancers instantly and seamlessly migrate active connections to healthy backup servers. This redundant architecture ensures your viewing is rarely interrupted by technical failures."
   },
   {
     question: "Is my payment information safe with Interac e-Transfer?",

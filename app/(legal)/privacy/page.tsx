@@ -81,7 +81,7 @@ export default function PrivacyPage() {
             </div>
             
             <p className="mt-12 text-xs text-slate-400 font-bold uppercase tracking-widest">
-              Last Updated: May 2026
+              Last Updated: August 2026
             </p>
           </div>
         </div>

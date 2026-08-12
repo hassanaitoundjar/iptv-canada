@@ -23,7 +23,7 @@ export function getOrganizationSchema() {
     "url": "https://iptvsmartproviders.com",
     // Standardized to /logo.png — the file that actually exists in /public
     "logo": "https://iptvsmartproviders.com/logo.png",
-    "description": "Canada's most reliable IPTV service. 25,000+ live channels, 120,000+ VODs, 4K streaming, 24/7 Canadian support.",
+    "description": "Premium Canadian IPTV service. 25,000+ live channels, 120,000+ VODs, 4K streaming, 24/7 Canadian support.",
     "telephone": "+1 (757) 957-5093",
     "email": "support@iptvsmartproviders.com",
     "contactPoint": {
@@ -102,61 +102,6 @@ export function getServiceSchema() {
         "availability": "https://schema.org/InStock",
         "url": "https://iptvsmartproviders.com/pricing",
         "priceValidUntil": "2027-12-31"
-      }
-    ],
-    // reviewCount: 247 — actual tracked reviews across support interactions.
-    // Keep this number honest: Google cross-checks it over time.
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "247",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    // 6 real representative reviews backing the aggregate.
-    // Without these, an AggregateRating is an unverified claim.
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Mike T." },
-        "datePublished": "2026-06-12",
-        "reviewBody": "Been using IPTV Canada for 8 months now. The picture quality on my 4K TV is incredible — way better than my old cable package for a fraction of the price. Setup was instant and the support team helped me get it working on my Firestick in under 10 minutes.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Sarah L." },
-        "datePublished": "2026-05-03",
-        "reviewBody": "I was skeptical at first but the free trial sold me. Every Canadian channel I need plus all the US sports. Switched to the 12-month plan and saved a lot vs cable. No buffering during hockey playoffs which was my real test.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Jean-Pierre M." },
-        "datePublished": "2026-04-20",
-        "reviewBody": "Service très fiable. Les chaînes francophones sont bien incluses — TVA, RDS, tout y est. Support réactif quand j'ai eu un problème de connexion un soir. Je recommande.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "David K." },
-        "datePublished": "2026-03-08",
-        "reviewBody": "Good value overall. Occasionally have a channel freeze during peak hours but it resolves quickly. VOD library is massive. The EPG guide makes it feel like a real cable experience. Would recommend for the price.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5", "worstRating": "1" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Amanda R." },
-        "datePublished": "2026-02-14",
-        "reviewBody": "Cut the cord 6 months ago and haven't looked back. The channel list is huge — I literally can't watch everything I want. Setup guide was clear and worked first try on my Samsung Smart TV. 24/7 support is a real plus.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Carlos B." },
-        "datePublished": "2026-01-27",
-        "reviewBody": "International channels are what sold me — I get Portuguese and Spanish channels alongside all the Canadian ones. Streaming is smooth at 4K. Been a customer for over a year and the service has only gotten better.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
       }
     ]
   }

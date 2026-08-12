@@ -25,7 +25,7 @@ export function ResellerHero() {
 
           {/* Subtext */}
           <p className="text-slate-400 text-sm sm:text-base max-w-2xl leading-relaxed mb-8">
-            Join the most reliable IPTV reseller network in Canada. 
+            Join the premium IPTV reseller network in Canada. 
             We provide the panel, the credits, and the 24/7 technical 
             support you need to build a successful recurring income.
           </p>

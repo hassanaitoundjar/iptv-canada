@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { CheckCircle2, ShieldCheck, Star, Users } from "lucide-react";
+import { Clock, ShieldCheck, Server, Users, MessageCircle, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About IPTV Canada | 8+ Years of Streaming Excellence",
-  description: "Learn more about IPTV Canada. For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
+  title: "About IPTV Canada | Reliable Canadian Streaming",
+  description: "Learn more about IPTV Canada. We deliver reliable, stable IPTV services tailored for Canadian households with dedicated, responsive support.",
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
-    title: "About IPTV Canada | 8+ Years of Streaming Excellence",
-    description: "Learn more about IPTV Canada. For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 local support across the nation.",
+    title: "About IPTV Canada | Reliable Canadian Streaming",
+    description: "Learn more about IPTV Canada. We deliver reliable, stable IPTV services tailored for Canadian households with dedicated, responsive support.",
     url: `${siteConfig.url}/about`,
     siteName: "IPTV Canada",
     locale: "en_CA",
@@ -20,13 +21,13 @@ export const metadata: Metadata = {
       url: `${siteConfig.url}/og?title=About%20IPTV%20Canada`,
       width: 1200,
       height: 630,
-      alt: "About IPTV Canada — 8+ Years of Streaming Excellence",
+      alt: "About IPTV Canada",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About IPTV Canada | 8+ Years of Streaming Excellence",
-    description: "For over 8 years, our team has been delivering premium 4K IPTV services with 24/7 Canadian support.",
+    title: "About IPTV Canada | Reliable Canadian Streaming",
+    description: "We deliver reliable, stable IPTV services tailored for Canadian households.",
     images: [`${siteConfig.url}/og?title=About%20IPTV%20Canada`],
   },
 };
@@ -39,9 +40,8 @@ export default function AboutPage() {
       "@type": "Organization",
       name: "IPTV Canada",
       url: siteConfig.url,
-      logo: `${siteConfig.url}/images/logo.png`,
-      description: "Canada's premier IPTV service provider offering 25,000+ live channels and 4K VOD content with 24/7 dedicated support.",
-      foundingDate: "2010",
+      logo: `${siteConfig.url}/logo.png`,
+      description: "IPTV service provider offering live channels and VOD content with dedicated Canadian support.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -59,19 +59,19 @@ export default function AboutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(aboutSchema) }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 mb-6 text-brand-blue">
             <div className="w-2 h-2 rotate-45 bg-brand-blue" />
-            <span className="text-[10px] sm:text-xs font-black uppercase tracking-[4px]">Our Story</span>
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-[4px]">Our Operations</span>
             <div className="w-2 h-2 rotate-45 bg-brand-blue" />
           </div>
           <h1 className="text-4xl sm:text-6xl font-black text-brand-dark tracking-tighter mb-6">
-            Redefining Television in <span className="text-brand-blue">Canada</span>
+            Reliable Streaming for <span className="text-brand-blue">Canadians</span>
           </h1>
           <p className="text-slate-500 text-base sm:text-lg leading-relaxed font-medium">
-            For over 8 years, IPTV Canada has been at the forefront of digital entertainment, providing reliable, high-quality streaming solutions to thousands of households coast to coast.
+            At IPTV Canada, our goal is simple: provide stable, high-quality television without the exorbitant costs of traditional Canadian cable providers.
           </p>
         </div>
 
@@ -79,102 +79,81 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
           <div className="space-y-6">
             <h2 className="text-3xl font-black text-brand-dark tracking-tight">
-              A Decade and a Half of Excellence
+              How We Deliver Content
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              We started with a simple mission: to make premium television accessible and affordable for every Canadian. Tired of overpriced cable packages and restrictive contracts, we built a network designed for the modern viewer.
+              The biggest issue with budget IPTV services is instability during peak viewing hours. We solve this by investing in load-balanced server infrastructure. Instead of routing all traffic through a single point, our network intelligently distributes bandwidth.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Today, we are proud to offer over 25,000 live channels and a massive VOD library of 120,000+ movies and series. But our technology is only half the story. Our true strength lies in our dedicated team based right here in Canada, ensuring you always have real people to help you out when you need it.
+              When thousands of Canadians tune in for Hockey Night in Canada or a major PPV event, our servers automatically scale to handle the load, drastically reducing the buffering and freezing associated with standard streaming services.
             </p>
             <div className="pt-6">
               <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck className="text-green-600" size={24} />
+                <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <Server className="text-brand-blue" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-black text-brand-dark text-sm uppercase tracking-widest mb-1">100% Satisfaction Guarantee</h4>
-                  <p className="text-slate-500 text-sm">Tested and verified by thousands of active subscribers.</p>
+                  <h4 className="font-black text-brand-dark text-sm uppercase tracking-widest mb-1">Optimized Routing</h4>
+                  <p className="text-slate-500 text-sm">Engineered to minimize latency across Canadian ISPs.</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-lg text-center transform translate-y-8">
-                <Users className="w-10 h-10 text-brand-blue mx-auto mb-4" />
-                <h3 className="text-3xl font-black text-brand-dark mb-2">50K+</h3>
-                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Happy Viewers</p>
+                <MessageCircle className="w-10 h-10 text-brand-blue mx-auto mb-4" />
+                <h3 className="text-xl font-black text-brand-dark mb-2">Fast Response</h3>
+                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Via WhatsApp</p>
               </div>
               <div className="bg-brand-dark p-8 rounded-[32px] border border-slate-800 shadow-xl text-center">
-                <Star className="w-10 h-10 text-yellow-400 mx-auto mb-4" />
-                <h3 className="text-3xl font-black text-white mb-2">4.9/5</h3>
-                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Average Rating</p>
+                <CheckCircle2 className="w-10 h-10 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-black text-white mb-2">Tested</h3>
+                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Reliability</p>
               </div>
             </div>
             <div className="space-y-4">
               <div className="bg-brand-blue p-8 rounded-[32px] shadow-xl text-center">
-                <h3 className="text-4xl font-black text-white mb-2">8+</h3>
-                <p className="text-blue-100 text-xs font-bold uppercase tracking-widest">Years Experience</p>
+                <ShieldCheck className="w-10 h-10 text-white mx-auto mb-4" />
+                <h3 className="text-xl font-black text-white mb-2">Secure</h3>
+                <p className="text-blue-100 text-xs font-bold uppercase tracking-widest">Infrastructure</p>
               </div>
               <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-lg text-center transform -translate-y-8">
-                <CheckCircle2 className="w-10 h-10 text-green-500 mx-auto mb-4" />
-                <h3 className="text-3xl font-black text-brand-dark mb-2">99.9%</h3>
-                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Server Uptime</p>
+                <Users className="w-10 h-10 text-brand-blue mx-auto mb-4" />
+                <h3 className="text-xl font-black text-brand-dark mb-2">Canadian</h3>
+                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Support Team</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Our Values */}
+        {/* Support Section */}
         <div className="bg-white rounded-[40px] p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50 mb-12">
           <h2 className="text-3xl font-black text-center text-brand-dark tracking-tight mb-12">
-            Why Choose Our Team?
+            Real Support, Real People
           </h2>
           <div className="grid sm:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                <Clock className="text-brand-blue" size={28} />
+              </div>
+              <h3 className="text-xl font-black text-brand-dark mb-3">Response Times</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">We strive to answer all WhatsApp and email inquiries within a few hours during normal business operations. We won't leave you hanging when you need setup help.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
                 <ShieldCheck className="text-brand-blue" size={28} />
               </div>
-              <h3 className="text-xl font-black text-brand-dark mb-3">Transparency</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">No hidden fees, no surprise price hikes, and absolutely no restrictive contracts. We earn your business every single month.</p>
+              <h3 className="text-xl font-black text-brand-dark mb-3">No Contracts</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">We believe in earning your business every month. There are no hidden fees, no credit checks, and no restrictive long-term contracts required.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                <Star className="text-brand-blue" size={28} />
+                <MessageCircle className="text-brand-blue" size={28} />
               </div>
-              <h3 className="text-xl font-black text-brand-dark mb-3">Quality First</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">We continually invest in our server infrastructure to ensure true 4K streaming without the frustrating buffering during peak hours.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                <Users className="text-brand-blue" size={28} />
-              </div>
-              <h3 className="text-xl font-black text-brand-dark mb-3">Local Support</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">When you reach out for help, you&apos;re talking to our Canadian support team who understands your needs and resolves issues instantly.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* E-E-A-T Author Bio Section */}
-        <div id="team" className="bg-white rounded-[40px] p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50">
-          <h2 className="text-3xl font-black text-center text-brand-dark tracking-tight mb-12">
-            Meet Our Experts
-          </h2>
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border-4 border-slate-50 shadow-inner bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Alex - IPTV Technical Specialist" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-black text-brand-dark mb-1" id="alex">Alex</h3>
-              <p className="text-brand-blue font-bold tracking-wide uppercase text-sm mb-4">IPTV Technical Specialist</p>
-              <p className="text-slate-500 leading-relaxed mb-4">
-                Alex leads our technical support and network optimization division. With over 8 years of experience in the streaming industry, Alex specializes in home network configurations, multi-device routing, and troubleshooting complex IPTV setups. 
-              </p>
-              <p className="text-slate-500 leading-relaxed">
-                As the primary author of the IPTV Canada Guides, Alex shares expert insights on how cord-cutters can maximize their streaming quality and avoid common pitfalls with ISPs and hardware constraints.
-              </p>
+              <h3 className="text-xl font-black text-brand-dark mb-3">Direct Communication</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">Reach out directly via our <Link href="/contact" className="text-brand-blue hover:underline">Contact Page</Link>. Our team is experienced with all major devices (Firestick, Apple TV, Smart TVs) and networking setups.</p>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export function Footer() {
             </Link>
             
             <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-sm font-medium">
-              Elevate your home entertainment with Canada&apos;s most reliable IPTV network. 
+              Elevate your home entertainment with Canada&apos;s premium IPTV network. 
               Enjoy 25,000+ live channels and a massive VOD library in stunning 4K quality.
             </p>
 
@@ -102,7 +102,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-white font-black text-xs uppercase tracking-[3px] mb-8">Cities</h3>
             <ul className="space-y-4">
-              {cities.slice(0, 5).map((city) => (
+              {cities.map((city) => (
                 <li key={city.slug}>
                   <Link 
                     href={`/${city.slug}`} 

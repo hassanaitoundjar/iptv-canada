@@ -37,11 +37,7 @@ export function Testimonials() {
           <div className="bg-white border border-slate-100 rounded-[32px] shadow-xl shadow-slate-200/50 overflow-hidden">
             <div className="p-8 sm:p-12">
               {/* Card Top */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-                <div className="flex items-center gap-2 px-3 py-1 bg-green-50 text-green-600 rounded-full">
-                  <CheckCircle size={14} />
-                  <span className="text-[10px] font-black uppercase tracking-wider">Verified Customer</span>
-                </div>
+              <div className="flex justify-end mb-8">
                 <span className="text-slate-600 text-xs font-medium">Reviewed • {testimonials[currentIndex].date}</span>
               </div>
 

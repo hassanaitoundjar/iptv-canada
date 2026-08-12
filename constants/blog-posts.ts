@@ -9,8 +9,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   featured?: boolean;
-  author?: string;
-  authorUrl?: string;
+  authorId?: string;
+  updated?: string;
   content: string;
 }
 
@@ -21,8 +21,8 @@ interface BlogMeta {
   date: string;
   readTime: string;
   featured?: boolean;
-  author?: string;
-  authorUrl?: string;
+  authorId?: string;
+  updated?: string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
@@ -76,10 +76,10 @@ export function getAllBlogPosts(): BlogPost[] {
       excerpt: meta.excerpt,
       category: meta.category,
       date: meta.date,
+      updated: meta.updated || meta.date,
       readTime: meta.readTime,
       featured: meta.featured || false,
-      author: meta.author,
-      authorUrl: meta.authorUrl,
+      authorId: meta.authorId,
       content,
     };
   });
@@ -101,10 +101,10 @@ export function getBlogPost(slug: string): BlogPost | undefined {
     excerpt: meta.excerpt,
     category: meta.category,
     date: meta.date,
+    updated: meta.updated || meta.date,
     readTime: meta.readTime,
     featured: meta.featured || false,
-    author: meta.author,
-    authorUrl: meta.authorUrl,
+    authorId: meta.authorId,
     content,
   };
 }

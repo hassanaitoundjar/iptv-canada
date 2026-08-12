@@ -12,14 +12,14 @@ import { getBreadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "IPTV Reseller Program Canada — Start Your Business Today | IPTV Canada",
-  description: "Join the #1 IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins with our stable credits system.",
+  description: "Join the Premium IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins with our stable credits system.",
   keywords: ["IPTV reseller Canada", "IPTV panel reseller", "start IPTV business", "IPTV credits buy", "best IPTV reseller panel"],
   alternates: {
     canonical: "https://iptvsmartproviders.com/reseller",
   },
   openGraph: {
     title: "IPTV Reseller Program Canada — Start Your Business Today",
-    description: "Join the #1 IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins.",
+    description: "Join the Premium IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins.",
     url: "https://iptvsmartproviders.com/reseller",
   }
 };

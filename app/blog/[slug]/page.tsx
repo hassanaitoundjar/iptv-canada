@@ -8,6 +8,7 @@ import { safeJsonLd } from "@/lib/safe-json-ld";
 import { getBlogPostSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import { AuthorBio } from "@/components/shared/AuthorBio";
 import { BlogCta } from "@/components/shared/BlogCta";
+import { getAuthor } from "@/constants/authors";
 
 export const revalidate = 3600; // revalidate every hour
 
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
-      authors: [post.author || "IPTV Canada Team"],
+      authors: [getAuthor(post.authorId).name],
       images: [
         {
           url: ogImageUrl,
@@ -72,14 +73,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   // BlogPosting JSON-LD schema — named human author for E-E-A-T
+  const author = getAuthor(post.authorId);
   const articleSchema = getBlogPostSchema({
     title: post.title,
     description: post.excerpt,
     url: `https://iptvsmartproviders.com/blog/${slug}`,
     datePublished: post.date,
-    dateModified: post.date,
-    authorName: post.author || "IPTV Canada Team",
-    authorUrl: post.authorUrl,
+    dateModified: post.updated || post.date,
+    authorName: author.name,
+    authorUrl: `https://iptvsmartproviders.com${author.url}`,
     image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
   });
 
@@ -288,18 +290,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.excerpt}
           </p>
 
-          <div className="flex items-center gap-6 text-slate-500 text-xs font-semibold">
+          <div className="flex flex-wrap items-center gap-4 text-slate-400 text-xs font-semibold">
+            <Link href={author.url} className="flex items-center gap-2 hover:text-white transition-colors">
+              <div className="w-6 h-6 rounded-full overflow-hidden">
+                <Image src={author.avatar} alt={author.name} width={24} height={24} className="object-cover" />
+              </div>
+              <span className="text-brand-blue">{author.name}</span>
+            </Link>
+            <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5">
               <Clock size={14} />
               {post.readTime}
             </span>
+            <span className="hidden sm:inline">•</span>
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString("en-CA", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
+              Published: {new Date(post.date).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}
             </time>
+            {post.updated && post.updated !== post.date && (
+              <>
+                <span className="hidden sm:inline">•</span>
+                <time dateTime={post.updated}>
+                  Updated: {new Date(post.updated).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}
+                </time>
+              </>
+            )}
           </div>
         </div>
       </header>
@@ -314,7 +328,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <BlogCta headline="Ready to Try IPTV Canada?" />
 
         {/* Author Bio — E-E-A-T signal */}
-        <AuthorBio />
+        <AuthorBio author={author} />
 
         {/* Internal Links: Related Articles */}
         {relatedPosts.length > 0 && (
