@@ -3,6 +3,8 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { ContactFAQ } from "@/components/sections/ContactFAQ";
 import type { Metadata } from "next";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getBreadcrumbSchema } from "@/lib/schemas";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contact Us | IPTV Canada Support",
@@ -28,11 +30,20 @@ export default function ContactPage() {
     }
   };
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Contact", url: `${siteConfig.url}/contact` }
+  ]);
+
   return (
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(contactSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
       <ContactHero />
       <ContactForm />

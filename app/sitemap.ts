@@ -20,6 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/press`,              changeFrequency: 'monthly' as const, priority: 0.5, lastModified: today },
     { url: `${baseUrl}/iptv-apps`,          changeFrequency: 'monthly' as const, priority: 0.7, lastModified: today },
     { url: `${baseUrl}/iptv-firestick-canada`, changeFrequency: 'monthly' as const, priority: 0.8, lastModified: today },
+    { url: `${baseUrl}/faq`,                changeFrequency: 'monthly' as const, priority: 0.6, lastModified: today },
+    { url: `${baseUrl}/team`,               changeFrequency: 'monthly' as const, priority: 0.5, lastModified: today },
+    { url: `${baseUrl}/dmca`,               changeFrequency: 'yearly'  as const, priority: 0.3, lastModified: today },
+    { url: `${baseUrl}/privacy`,            changeFrequency: 'yearly'  as const, priority: 0.3, lastModified: today },
+    { url: `${baseUrl}/terms`,              changeFrequency: 'yearly'  as const, priority: 0.3, lastModified: today },
   ]
 
   // Add blog posts dynamically with their publish date as lastModified

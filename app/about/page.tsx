@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, ShieldCheck, Server, Users, MessageCircle, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getBreadcrumbSchema } from "@/lib/schemas";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -53,10 +54,16 @@ export default function AboutPage() {
     }
   };
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "About", url: `${siteConfig.url}/about` }
+  ]);
+
   return (
     <main className="min-h-screen bg-[#f8fafc] pt-32 pb-24">
       {/* Schema Injection */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(aboutSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

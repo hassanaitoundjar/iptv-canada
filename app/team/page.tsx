@@ -3,6 +3,8 @@ import { siteConfig } from "@/config/site";
 import { authors } from "@/constants/authors";
 import Image from "next/image";
 import { Users } from "lucide-react";
+import { safeJsonLd } from "@/lib/safe-json-ld";
+import { getBreadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Our Team | IPTV Canada",
@@ -13,8 +15,17 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Our Team", url: `${siteConfig.url}/team` }
+  ]);
+
   return (
     <main className="min-h-screen bg-[#f8fafc] pt-32 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tighter mb-6">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import { safeJsonLd } from "@/lib/safe-json-ld";
 import Link from "next/link";
 
@@ -38,24 +39,20 @@ const faqs = [
 ];
 
 export default function FAQPage() {
-  const schemaFaqs = faqs.flatMap(category => category.questions.map(item => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a
-    }
+  const flatFaqs = faqs.flatMap(category => category.questions.map(item => ({
+    question: item.q,
+    answer: item.a
   })));
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: schemaFaqs
-  };
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "FAQ", url: `${siteConfig.url}/faq` }
+  ]);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] pt-32 pb-24">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(getFAQSchema(flatFaqs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

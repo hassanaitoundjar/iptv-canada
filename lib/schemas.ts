@@ -143,13 +143,12 @@ export function getLocalServiceSchema(city: string, provinceCode: string, url: s
   }
 }
 
-// 4. FAQPage schema — REMOVED from rich results by Google on May 7, 2026.
-// Kept as QAPage for semantic value (no SERP feature, but still crawlable).
-// Do NOT expect rich result treatment in Google Search for this type.
+// 4. FAQPage schema
+// Updated per Nextjs 16 SEO guidelines and user preference.
 export function getFAQSchema(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
-    "@type": "QAPage",
+    "@type": "FAQPage",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
