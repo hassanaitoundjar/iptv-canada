@@ -33,6 +33,13 @@ function isRateLimited(key: string): boolean {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // ── Block specific countries ────────────────────────────────────────────────
+  const country = request.headers.get("x-vercel-ip-country") ?? request.headers.get("cf-ipcountry");
+  
+  if (country === "SG") {
+    return new NextResponse("Access Denied", { status: 403 });
+  }
+
   // ── Rate limiting on sensitive routes ───────────────────────────────────────
   const sensitiveRoutes = ["/contact", "/checkout", "/reseller", "/api/"];
   if (sensitiveRoutes.some((r) => pathname.startsWith(r))) {
