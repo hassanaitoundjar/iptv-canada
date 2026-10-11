@@ -13,7 +13,7 @@ tags:
   - cord-cutting
   - savings
 metadata:
-  canonical: https://iptvsmartproviders.com/iptv-vs-cable-tv-cost-comparison-2026
+  canonical: https://iptvsmartproviders.comiptv-vs-cable-tv-cost-comparison-2026
 ---
 
 # IPTV vs Cable TV - Complete Cost Comparison 2026 (Real Numbers)

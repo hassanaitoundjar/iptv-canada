@@ -4,7 +4,7 @@
 
 ### Findings Summary
 1. **Critical:** Canonical Tag vs. 308 Permanent Redirect Conflict
-   - Apex domain `https://iptvsmartproviders.com` returns a 308 redirect to `https://www.iptvsmartproviders.com/`.
+   - Apex domain `https://iptvsmartproviders.com` returns a 308 redirect to `https://iptvsmartproviders.com`.
    - The `<link rel="canonical">` tag on the live site points back to `https://iptvsmartproviders.com`.
    - This creates a circular directive for search engines and dilutes PageRank consolidation.
 2. **High:** Redirected URLs in XML Sitemap

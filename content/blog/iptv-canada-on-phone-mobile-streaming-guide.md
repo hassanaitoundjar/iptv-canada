@@ -5,7 +5,7 @@ category: "Guides"
 excerpt: "Watch IPTV on your phone anywhere in Canada. Step-by-step setup for iPhone and Android, best mobile IPTV apps, data usage tips, and how to cast from your phone to your TV."
 featured: false
 readTime: "9 min read"
-canonical: "https://iptvsmartproviders.com/blog/iptv-canada-on-phone-mobile-streaming-guide"
+canonical: "https://iptvsmartproviders.comblog/iptv-canada-on-phone-mobile-streaming-guide"
 ---
 
 Your phone is the most powerful streaming device you own — and it fits in your pocket.
@@ -76,7 +76,7 @@ Same as the iOS version but with additional Android-specific features:
 - **External player support** — use MX Player or VLC for advanced codec handling
 - **Auto-start** — launch IPTV Smarters when your phone connects to home Wi-Fi
 
-[Full IPTV Smarters Pro guide →](https://iptvsmartproviders.com/blog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv)
+[Full IPTV Smarters Pro guide →](https://iptvsmartproviders.comblog/how-to-install-iptv-smarters-pro-on-firestick-google-android-tv)
 
 ### 2. TiviMate (Android)
 
@@ -87,7 +87,7 @@ The premium choice for serious IPTV viewers.
 - **Catch-up TV** — rewind live channels up to 7 days
 - **Speed controls** — fast-forward through recorded content
 
-[TiviMate setup guide →](https://iptvsmartproviders.com/blog/install-activate-tivimate-on-android-tv)
+[TiviMate setup guide →](https://iptvsmartproviders.comblog/install-activate-tivimate-on-android-tv)
 
 ### 3. OTT Navigator (Android)
 
@@ -105,9 +105,9 @@ Regardless of which phone you have, the setup process is the same:
 ### Step 1: Get Your IPTV Subscription
 
 If you don't have one yet:
-1. Visit the [pricing page](https://iptvsmartproviders.com/pricing) and choose a plan
+1. Visit the [pricing page](https://iptvsmartproviders.compricing) and choose a plan
 2. You will receive your credentials via email: **server URL**, **username**, and **password**
-3. Or [start with a free trial](https://iptvsmartproviders.com/free-trial) to test on your phone first
+3. Or [start with a free trial](https://iptvsmartproviders.comfree-trial) to test on your phone first
 
 ### Step 2: Download Your App
 
@@ -230,8 +230,8 @@ Yes. All the apps mentioned above (IPTV Smarters Pro, TiviMate, GSE Smart IPTV) 
 
 Your phone is already in your pocket. All you need is an app and a subscription.
 
-1. [Start a free trial](https://iptvsmartproviders.com/free-trial) to test IPTV on your phone
+1. [Start a free trial](https://iptvsmartproviders.comfree-trial) to test IPTV on your phone
 2. Download IPTV Smarters Pro from the [App Store](https://apps.apple.com) or [Google Play](https://play.google.com)
 3. Enter your credentials and start watching — live TV, sports, movies, and 120,000+ VOD titles, anywhere in Canada
 
-[View pricing plans →](https://iptvsmartproviders.com/pricing)
+[View pricing plans →](https://iptvsmartproviders.compricing)

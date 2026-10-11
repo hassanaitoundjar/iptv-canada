@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   description: "Affordable IPTV subscription plans for Canada. 4K quality, 25,000+ channels, and instant activation. No contracts, 24/7 Canadian support.",
   keywords: ["IPTV subscription Canada", "cheap IPTV Canada", "best IPTV 2026", "IPTV trial Canada", "monthly IPTV subscription"],
   alternates: {
-    canonical: "https://iptvsmartproviders.com/pricing",
+    canonical: "https://iptvsmartproviders.compricing",
   },
   openGraph: {
     title: "IPTV Subscription Plans Canada — 25,000+ Channels | IPTV Canada",
     description: "Affordable IPTV subscription plans for Canada. 4K quality, 25,000+ channels, and instant activation. No contracts, 24/7 Canadian support.",
-    url: "https://iptvsmartproviders.com/pricing",
+    url: "https://iptvsmartproviders.compricing",
     siteName: "IPTV Canada",
     locale: "en_CA",
     type: "website",
     images: [{
-      url: "https://iptvsmartproviders.com/og?title=IPTV%20Subscription%20Plans%20Canada",
+      url: "https://iptvsmartproviders.comog?title=IPTV%20Subscription%20Plans%20Canada",
       width: 1200,
       height: 630,
       alt: "IPTV Canada Subscription Plans — 25,000+ Channels",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IPTV Subscription Plans Canada — 25,000+ Channels",
     description: "Affordable IPTV subscription plans for Canada. 4K quality, 25,000+ channels, instant activation. No contracts.",
-    images: ["https://iptvsmartproviders.com/og?title=IPTV%20Subscription%20Plans%20Canada"],
+    images: ["https://iptvsmartproviders.comog?title=IPTV%20Subscription%20Plans%20Canada"],
   },
 };
 
 export default function PricingPage() {
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://iptvsmartproviders.com" },
-    { name: "Pricing", url: "https://iptvsmartproviders.com/pricing" }
+    { name: "Pricing", url: "https://iptvsmartproviders.compricing" }
   ]);
 
   return (

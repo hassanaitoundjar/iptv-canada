@@ -5,7 +5,7 @@ category: "Troubleshooting"
 excerpt: "Tired of your IPTV freezing in the middle of a big game? Follow these 5 proven steps to eliminate IPTV buffering and restore crystal-clear streaming."
 featured: true
 readTime: "6 min read"
-canonical: "https://iptvsmartproviders.com/blog/how-to-fix-iptv-buffering"
+canonical: "https://iptvsmartproviders.comblog/how-to-fix-iptv-buffering"
 ---
 
 There is nothing worse than inviting friends over for a hockey game or a PPV fight, only for your IPTV stream to freeze right at the critical moment.

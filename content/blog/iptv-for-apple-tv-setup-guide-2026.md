@@ -13,7 +13,7 @@ tags:
   - best-iptv-app-apple-tv
   - apple-tv-4k-iptv
 metadata:
-  canonical: https://iptvsmartproviders.com/iptv-for-apple-tv-setup-guide-2026
+  canonical: https://iptvsmartproviders.comiptv-for-apple-tv-setup-guide-2026
 ---
 
 # IPTV for Apple TV 2026: Complete Setup Guide (All Models)

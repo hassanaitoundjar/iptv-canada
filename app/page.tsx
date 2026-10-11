@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     type: "website",
     images: [{
-      url: "https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026",
+      url: "https://iptvsmartproviders.comog?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026",
       width: 1200,
       height: 630,
       alt: "IPTV Canada | 2026  premium IPTV service With 24h Free Trial",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IPTV Canada | 2026 premium IPTV service With 24h Free Trial",
     description: "Premium Canadian IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
-    images: ["https://iptvsmartproviders.com/og?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026"],
+    images: ["https://iptvsmartproviders.comog?title=IPTV%20Canada%20%E2%80%94%20%231%20Premium%20IPTV%20Subscription%20in%20Canada%202026"],
   },
 };
 

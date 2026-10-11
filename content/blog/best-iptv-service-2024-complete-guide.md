@@ -12,7 +12,7 @@ tags:
   - iptv-service
   - streaming
 metadata:
-  canonical: https://iptvsmartproviders.com/best-iptv-service-2024-complete-guide
+  canonical: https://iptvsmartproviders.combest-iptv-service-2024-complete-guide
 ---
 
 # Best IPTV Service 2024 - Complete Guide to Choosing the Right Provider

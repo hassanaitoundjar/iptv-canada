@@ -11,7 +11,7 @@ tags:
   - iptv-smarters
   - roku
 metadata:
-  canonical: https://iptvsmartproviders.com/how-to-install-watch-iptv-on-roku
+  canonical: https://iptvsmartproviders.comhow-to-install-watch-iptv-on-roku
 ---
 
 # How to Install and Watch IPTV on Roku

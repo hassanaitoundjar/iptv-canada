@@ -13,7 +13,7 @@ tags:
   - iptv-explained
   - streaming
 metadata:
-  canonical: https://iptvsmartproviders.com/what-is-iptv-complete-beginners-guide-2026
+  canonical: https://iptvsmartproviders.comwhat-is-iptv-complete-beginners-guide-2026
 ---
 
 # What is IPTV? Complete Beginner's Guide 2026

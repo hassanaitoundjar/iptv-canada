@@ -8,7 +8,7 @@
 ## 🚨 Phase 1: Critical Technical Fixes (Immediate / Day 1–2)
 
 ### 1. Resolve Canonical vs. 308 Redirect Discrepancy
-- **Problem:** `https://iptvsmartproviders.com` redirects (308) to `https://www.iptvsmartproviders.com/`, but `<link rel="canonical">` points to the non-www domain.
+- **Problem:** `https://iptvsmartproviders.com` redirects (308) to `https://iptvsmartproviders.com`, but `<link rel="canonical">` points to the non-www domain.
 - **Action:**
   - In `config/site.ts`: change `url` to `"https://www.iptvsmartproviders.com"`.
   - In `app/layout.tsx`: change `metadataBase` to `new URL('https://www.iptvsmartproviders.com')` and `canonical` to `'https://www.iptvsmartproviders.com'`.
@@ -18,7 +18,7 @@
 - **Problem:** Search engines crawling `sitemap.xml` encounter 308 redirects on every single entry.
 - **Action:**
   - In `app/sitemap.ts`: set `baseUrl = 'https://www.iptvsmartproviders.com'`.
-  - In `app/robots.ts`: set `sitemap: 'https://www.iptvsmartproviders.com/sitemap.xml'`.
+  - In `app/robots.ts`: set `sitemap: 'https://iptvsmartproviders.comsitemap.xml'`.
 - **Expected Outcome:** Sitemaps serve 100% clean 200 OK canonical URLs.
 
 ### 3. Add RFC 9116 `security.txt`

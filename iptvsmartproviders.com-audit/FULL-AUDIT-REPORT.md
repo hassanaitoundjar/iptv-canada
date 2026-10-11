@@ -18,8 +18,8 @@
 | **Primary Vulnerability** | Apex to WWW 308 redirect vs. Apex Canonical Tag loop | Search engine indexing friction & crawl budget waste |
 
 ### Top 5 Key Findings
-1. 🔴 **Canonical vs. 308 Redirect Contradiction (Critical):** `https://iptvsmartproviders.com` 308-redirects to `https://www.iptvsmartproviders.com/`. However, the page's HTML `<link rel="canonical">` specifies the non-www apex domain. Search engine crawlers visiting the www page are instructed that the non-www page is authoritative, but requesting non-www immediately redirects back to www.
-2. 🟠 **Sitemap URLs Redirecting (High):** All 97+ URLs listed in `sitemap.xml` use the apex domain (`https://iptvsmartproviders.com/...`). Consequently, every single URL in the sitemap returns a 308 redirect rather than a direct 200 OK.
+1. 🔴 **Canonical vs. 308 Redirect Contradiction (Critical):** `https://iptvsmartproviders.com` 308-redirects to `https://iptvsmartproviders.com`. However, the page's HTML `<link rel="canonical">` specifies the non-www apex domain. Search engine crawlers visiting the www page are instructed that the non-www page is authoritative, but requesting non-www immediately redirects back to www.
+2. 🟠 **Sitemap URLs Redirecting (High):** All 97+ URLs listed in `sitemap.xml` use the apex domain (`https://iptvsmartproviders.com...`). Consequently, every single URL in the sitemap returns a 308 redirect rather than a direct 200 OK.
 3. 🟢 **World-Class Content Quality (Exceptional):** Automated NLP evaluation of core pillar pages (`best-iptv-canada.md`) showed a **93/100 quality score**, **0/100 filler score**, and **0.83 information density**, placing the editorial depth well ahead of typical streaming competitors.
 4. 🟢 **Comprehensive Canadian Geographic Targeting (Strength):** 10 dedicated Canadian city landing pages (Toronto, Vancouver, Montreal, Calgary, Ottawa, etc.) with localized ISP compatibility and local sports team context.
 5. 🟢 **Active AI Search Readiness (GEO):** A complete `public/llms.txt` file is already deployed and structured according to emerging AI agent crawl specifications.
@@ -56,8 +56,8 @@ pie title SEO Health Score Breakdown (87/100)
 ### 3.1 Technical SEO (Score: 78/100)
 - **Crawlability & Robots.txt:** `robots.txt` is correctly configured to allow public content while preventing indexing on transactional routes (`/checkout`, `/api/`).
 - **Canonical Loop Issue:**
-  - Request: `GET https://iptvsmartproviders.com` -> Response: `308 Permanent Redirect` -> Location: `https://www.iptvsmartproviders.com/`
-  - Canonical Tag on `https://www.iptvsmartproviders.com/`: `<link rel="canonical" href="https://iptvsmartproviders.com">`
+  - Request: `GET https://iptvsmartproviders.com` -> Response: `308 Permanent Redirect` -> Location: `https://iptvsmartproviders.com`
+  - Canonical Tag on `https://iptvsmartproviders.com`: `<link rel="canonical" href="https://iptvsmartproviders.com">`
   - *Risk:* Search engines may drop pages from index or struggle to consolidate link signals due to conflicting canonical directives.
 - **Security Headers:**
   - HSTS: `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload` (Enabled)

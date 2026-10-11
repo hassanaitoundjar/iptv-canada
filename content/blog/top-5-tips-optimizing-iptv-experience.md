@@ -11,7 +11,7 @@ tags:
   - tips
   - iptv
 metadata:
-  canonical: https://iptvsmartproviders.com/top-5-tips-optimizing-iptv-experience
+  canonical: https://iptvsmartproviders.comtop-5-tips-optimizing-iptv-experience
 ---
 
 # Top 5 Tips for Optimizing Your IPTV Experience

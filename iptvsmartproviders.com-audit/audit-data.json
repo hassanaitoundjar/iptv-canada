@@ -33,7 +33,7 @@
         {
           "title": "Canonical Redirect Loop (Apex vs WWW)",
           "severity": "Critical",
-          "description": "https://iptvsmartproviders.com redirects via 308 Permanent Redirect to https://www.iptvsmartproviders.com/. However, the HTML canonical tag on www points back to apex, creating an indexing contradiction.",
+          "description": "https://iptvsmartproviders.com redirects via 308 Permanent Redirect to https://iptvsmartproviders.com. However, the HTML canonical tag on www points back to apex, creating an indexing contradiction.",
           "recommendation": "Update siteConfig.url, metadataBase, and sitemap baseUrl to 'https://www.iptvsmartproviders.com' to match the live canonical domain."
         },
         {

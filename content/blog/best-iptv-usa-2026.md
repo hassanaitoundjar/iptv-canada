@@ -13,7 +13,7 @@ tags:
   - iptv-subscription-usa
   - cord-cutting-usa
 metadata:
-  canonical: https://iptvsmartproviders.com/best-iptv-usa-2026
+  canonical: https://iptvsmartproviders.combest-iptv-usa-2026
 ---
 
 # Best IPTV Service USA 2026: Top 5 Providers Tested & Ranked

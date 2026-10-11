@@ -13,7 +13,7 @@ tags:
   - samsung-tv-streaming
   - cord-cutting
 metadata:
-  canonical: https://iptvsmartproviders.com/best-iptv-for-samsung-smart-tv-2026
+  canonical: https://iptvsmartproviders.combest-iptv-for-samsung-smart-tv-2026
 ---
 
 # Best IPTV for Samsung Smart TV 2026: Top 5 Tested & Ranked

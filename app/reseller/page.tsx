@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   description: "Join the Premium IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins with our stable credits system.",
   keywords: ["IPTV reseller Canada", "IPTV panel reseller", "start IPTV business", "IPTV credits buy", "best IPTV reseller panel"],
   alternates: {
-    canonical: "https://iptvsmartproviders.com/reseller",
+    canonical: "https://iptvsmartproviders.comreseller",
   },
   openGraph: {
     title: "IPTV Reseller Program Canada — Start Your Business Today",
     description: "Join the Premium IPTV reseller program in Canada. Get a professional panel, 25,000+ channels, and high-profit margins.",
-    url: "https://iptvsmartproviders.com/reseller",
+    url: "https://iptvsmartproviders.comreseller",
   }
 };
 
@@ -40,7 +40,7 @@ export default function ResellerPage() {
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://iptvsmartproviders.com" },
-    { name: "Reseller", url: "https://iptvsmartproviders.com/reseller" }
+    { name: "Reseller", url: "https://iptvsmartproviders.comreseller" }
   ]);
 
   return (
@@ -57,8 +57,8 @@ export default function ResellerPage() {
       <Reseller />
       <div className="bg-slate-50 py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-black text-brand-dark tracking-tight mb-4">Why Partner With Us?</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">We provide the highest quality streams and the most stable panel in the Canadian market.</p>
+          <h2 className="text-3xl font-black text-brand-dark tracking-tight mb-4">Why Partner With Us?</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto">We provide the highest quality streams and the most stable panel in the Canadian market.</p>
         </div>
       </div>
       <Testimonials />

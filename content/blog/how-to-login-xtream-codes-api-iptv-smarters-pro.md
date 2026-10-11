@@ -12,7 +12,7 @@ tags:
   - api
   - setup
 metadata:
-  canonical: https://iptvsmartproviders.com/how-to-login-xtream-codes-api-iptv-smarters-pro
+  canonical: https://iptvsmartproviders.comhow-to-login-xtream-codes-api-iptv-smarters-pro
 ---
 
 # How to Login Xtream Codes API on IPTV Smarters Pro

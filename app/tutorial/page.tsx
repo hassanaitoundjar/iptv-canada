@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: "Step-by-step IPTV setup guide for Firestick, Android, iOS, Smart TV, and Windows. Follow our easy instructions to start watching in minutes.",
   keywords: ["IPTV setup guide", "how to install IPTV", "Firestick IPTV setup", "IPTV Smarters setup", "IPTV tutorial Canada"],
   alternates: {
-    canonical: "https://iptvsmartproviders.com/tutorial",
+    canonical: "https://iptvsmartproviders.comtutorial",
   },
   openGraph: {
     title: "IPTV Installation Guide — Setup Your Service Easily",
     description: "Step-by-step IPTV setup guide for Firestick, Android, iOS, Smart TV, and Windows.",
-    url: "https://iptvsmartproviders.com/tutorial",
+    url: "https://iptvsmartproviders.comtutorial",
   }
 };
 
@@ -36,7 +36,7 @@ export default function TutorialPage() {
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://iptvsmartproviders.com" },
-    { name: "Tutorial", url: "https://iptvsmartproviders.com/tutorial" }
+    { name: "Tutorial", url: "https://iptvsmartproviders.comtutorial" }
   ]);
 
   return (

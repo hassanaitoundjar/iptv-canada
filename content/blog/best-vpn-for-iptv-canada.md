@@ -5,7 +5,7 @@ category: "Tutorials"
 excerpt: "Is your IPTV service buffering during major NHL games? Your Canadian ISP might be throttling you. Here's why you need a VPN and which ones are the best for IPTV."
 featured: false
 readTime: "8 min read"
-canonical: "https://iptvsmartproviders.com/blog/best-vpn-for-iptv-canada"
+canonical: "https://iptvsmartproviders.comblog/best-vpn-for-iptv-canada"
 ---
 
 If you use an IPTV service in Canada, you might have noticed a frustrating trend: your streams work perfectly during the day, but the moment a massive NHL playoff game or UFC fight starts, everything begins to buffer.

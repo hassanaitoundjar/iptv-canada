@@ -5,7 +5,7 @@ category: "Reviews"
 excerpt: "Trying to decide between Tivimate and IPTV Smarters Pro? We break down the features, UI, and performance of the two most popular IPTV players for Android and Firestick."
 featured: false
 readTime: "7 min read"
-canonical: "https://iptvsmartproviders.com/blog/tivimate-vs-smarters-pro"
+canonical: "https://iptvsmartproviders.comblog/tivimate-vs-smarters-pro"
 ---
 
 When you subscribe to an IPTV service, you are usually just purchasing a connection (usually an M3U link or Xtream Codes API). To actually watch the channels, you need an **IPTV Player**.

@@ -13,7 +13,7 @@ tags:
   - iptv-bbc-itv
   - cord-cutting-uk
 metadata:
-  canonical: https://iptvsmartproviders.com/best-iptv-uk-2026
+  canonical: https://iptvsmartproviders.combest-iptv-uk-2026
 ---
 
 # Best IPTV Service UK 2026: Top 5 Providers Tested & Ranked

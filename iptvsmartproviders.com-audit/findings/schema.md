@@ -4,7 +4,7 @@
 
 ### Detected Structured Data Blocks
 1. **Organization Schema:**
-   - Declares name, official logo (`https://iptvsmartproviders.com/logo.png`), phone support (`+1 (757) 957-5093`), email, and social profiles.
+   - Declares name, official logo (`https://iptvsmartproviders.comlogo.png`), phone support (`+1 (757) 957-5093`), email, and social profiles.
    - `contactPoint` with bilingual support specification (English, French).
 2. **WebSite Schema:**
    - Declares `SearchAction` targeting `/blog?q={search_term_string}`.

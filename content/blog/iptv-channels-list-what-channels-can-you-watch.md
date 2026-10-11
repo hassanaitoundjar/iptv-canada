@@ -13,7 +13,7 @@ tags:
   - sports-channels
   - international-channels
 metadata:
-  canonical: https://iptvsmartproviders.com/iptv-channels-list-what-channels-can-you-watch
+  canonical: https://iptvsmartproviders.comiptv-channels-list-what-channels-can-you-watch
 ---
 
 # IPTV Channels List 2026 - What Channels Can You Watch?
