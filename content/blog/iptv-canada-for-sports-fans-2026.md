@@ -5,7 +5,7 @@ category: "Guides"
 excerpt: "Canadian sports fans are ditching Bell and Rogers for IPTV. Here's how to watch NHL, CFL, Raptors, Blue Jays, UFC, and F1 — all live, all in 4K, for a fraction of the cable cost."
 featured: false
 readTime: "10 min read"
-canonical: "https://iptvsmartproviders.com/blog/iptv-canada-for-sports-fans-2026"
+canonical: "https://www.iptvsmartproviders.com/blog/iptv-canada-for-sports-fans-2026"
 ---
 
 If you are a Canadian sports fan paying $80+ per month for Bell or Rogers sports packages, you already know the frustration. Blackout restrictions on your local team, forced bundling with channels you never watch, and a price that goes up every single year.
@@ -35,11 +35,11 @@ The math is straightforward. Here is what a typical Canadian sports setup costs 
 
 Hockey is non-negotiable for Canadian IPTV viewers. Here is what's included:
 
-- **Sportsnet (all regional feeds)** — Sportsnet East, Ontario, Pacific, West, and Sportsnet ONE
+- **Sportsnet (all regional feeds)** — Sportsnet East, Ontario, Pacific ([Vancouver Canucks](/iptv-vancouver) coverage), West, and Sportsnet ONE
 - **TSN (1 through 5)** — Complete TSN coverage across all five channels
 - **NHL Network** and **NHL Centre Ice** — Every out-of-market game, no add-on fee
 - **CBC Hockey Night in Canada** — Free OTA but also included in the IPTV lineup
-- **RDS** and **TVA Sports** — French-language hockey for Quebec fans
+- **RDS** and **TVA Sports** — French-language hockey for Quebec and [Montreal](/iptv-montreal) fans
 - **International hockey feeds** — KHL (Russia), SHL (Sweden), Liiga (Finland)
 
 **What this means in practice:** Every single NHL game is available live, including out-of-market matchups that Bell and Rogers would charge $25/month extra for through Centre Ice. No blackouts, no regional restrictions.
@@ -54,14 +54,14 @@ Hockey is non-negotiable for Canadian IPTV viewers. Here is what's included:
 
 ### Basketball — NBA and NCAA
 
-- **TSN and Sportsnet** — Toronto Raptors home and away games
+- **TSN and Sportsnet** — [Toronto](/iptv-toronto) Raptors home and away games
 - **NBA League Pass feeds** — Every out-of-market NBA game
 - **ESPN and TNT** — National NBA broadcasts
 - **NCAA March Madness feeds** — Complete tournament coverage
 
 ### Baseball — MLB
 
-- **Sportsnet** — Toronto Blue Jays games (home and away)
+- **Sportsnet** — [Toronto](/iptv-toronto) Blue Jays games (home and away)
 - **MLB Network and MLB Extra Innings feeds** — Out-of-market games
 - **ESPN, FOX, and TBS** — National MLB broadcasts
 

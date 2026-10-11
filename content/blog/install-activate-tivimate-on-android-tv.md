@@ -1,5 +1,5 @@
 ---
-title: "How to Install & Activate TiViMate on Android TV (2025 Guide)"
+title: "How to Install & Activate TiViMate on Android TV (2026 Guide)"
 date: "2025-10-10"
 category: "Guides"
 excerpt: "Learn how to install and activate TiViMate, the best IPTV player for Android TV. This step-by-step guide covers installation and premium activation."

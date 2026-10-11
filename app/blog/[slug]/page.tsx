@@ -9,6 +9,7 @@ import { getBlogPostSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import { AuthorBio } from "@/components/shared/AuthorBio";
 import { BlogCta } from "@/components/shared/BlogCta";
 import { getAuthor } from "@/constants/authors";
+import { siteConfig } from "@/config/site";
 
 export const revalidate = 3600; // revalidate every hour
 
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
 
   // Dynamic OG image generated per-post via /og route
-  const ogImageUrl = `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`;
+  const ogImageUrl = `${siteConfig.url}/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`;
 
   return {
     // Layout template appends "| IPTV Canada" — page title should NOT include it
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://iptvsmartproviders.com/blog/${slug}`,
+      url: `${siteConfig.url}/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
       siteName: "IPTV Canada",
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: [ogImageUrl],
     },
     alternates: {
-      canonical: `https://iptvsmartproviders.com/blog/${slug}`,
+      canonical: `${siteConfig.url}/blog/${slug}`,
     },
   };
 }
@@ -77,19 +78,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const articleSchema = getBlogPostSchema({
     title: post.title,
     description: post.excerpt,
-    url: `https://iptvsmartproviders.com/blog/${slug}`,
+    url: `${siteConfig.url}/blog/${slug}`,
     datePublished: post.date,
     dateModified: post.updated || post.date,
     authorName: author.name,
-    authorUrl: `https://iptvsmartproviders.com${author.url}`,
-    image: `https://iptvsmartproviders.com/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
+    authorUrl: `${siteConfig.url}${author.url}`,
+    image: `${siteConfig.url}/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
   });
 
   // BreadcrumbList schema
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Home", url: "https://iptvsmartproviders.com" },
-    { name: "Blog", url: "https://iptvsmartproviders.com/blog" },
-    { name: post.title, url: `https://iptvsmartproviders.com/blog/${slug}` }
+    { name: "Home", url: siteConfig.url },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: post.title, url: `${siteConfig.url}/blog/${slug}` }
   ]);
 
   const renderContent = (content: string) => {
