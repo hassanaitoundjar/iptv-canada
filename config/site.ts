@@ -22,4 +22,3 @@ export const siteConfig = {
     bing: "C599E88324F1BF23B219798A653D00D7",
   },
 };
-
