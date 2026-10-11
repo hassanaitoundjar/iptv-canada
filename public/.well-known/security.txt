@@ -1,0 +1,6 @@
+# Security Policy - IPTV Canada
+Contact: mailto:support@iptvsmartproviders.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en, fr
+Canonical: https://www.iptvsmartproviders.com/.well-known/security.txt
+Policy: https://www.iptvsmartproviders.com/privacy

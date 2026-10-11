@@ -78,7 +78,8 @@ export function Hero() {
             </div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6 sm:mb-8 tracking-tighter">
-              Best IPTV Canada <br />
+              Best IPTV Canada{" "}
+              <br />
               <span className="text-brand-blue">Service In 2026</span>
             </h1>
 

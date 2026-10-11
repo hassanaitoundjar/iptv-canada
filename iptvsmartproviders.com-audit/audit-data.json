@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "health_score": 87,
+    "business_type": "Subscription E-Commerce & Canadian Streaming Service",
+    "domain": "iptvsmartproviders.com",
+    "canonical_target": "www.iptvsmartproviders.com",
+    "top_findings": [
+      "Critical canonical domain mismatch: live apex domain redirects to www (308), but canonical tags and sitemaps point to apex",
+      "Sitemap.xml contains 100% 308 redirected URLs due to apex domain base URL",
+      "Exceptional content footprint with 63 specialized guides, achieving 93/100 quality score and 0 filler words",
+      "Strong technical infrastructure: SSG static pre-rendering, modern HTTP security headers, and Cloudflare CDN proxy",
+      "Advanced AI search readiness with valid llms.txt and high passage-level citability"
+    ],
+    "quick_wins": [
+      "Update baseUrl in config/site.ts and app/sitemap.ts to https://www.iptvsmartproviders.com to eliminate 308 redirect loops",
+      "Update canonical URL in app/layout.tsx and app/robots.ts to match the www version",
+      "Audit 2024/2025 titles in content/blog to update target year to 2026 for improved search snippet CTR",
+      "Add security.txt in public/.well-known/security.txt to clear Cloudflare Security Insights warning",
+      "Enrich author bio schema on blog posts to elevate E-E-A-T trust signals"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 78,
+      "what_works": [
+        "HSTS with preload and max-age=31536000 enabled",
+        "Strict Content Security Policy (CSP) and clickjacking protection",
+        "Crawl budget protection via robots.txt disallowing /checkout and /api/",
+        "97 static pages pre-rendered with zero runtime lag"
+      ],
+      "findings": [
+        {
+          "title": "Canonical Redirect Loop (Apex vs WWW)",
+          "severity": "Critical",
+          "description": "https://iptvsmartproviders.com redirects via 308 Permanent Redirect to https://www.iptvsmartproviders.com/. However, the HTML canonical tag on www points back to apex, creating an indexing contradiction.",
+          "recommendation": "Update siteConfig.url, metadataBase, and sitemap baseUrl to 'https://www.iptvsmartproviders.com' to match the live canonical domain."
+        },
+        {
+          "title": "Sitemap URLs Contain Redirected Endpoints",
+          "severity": "High",
+          "description": "All URLs listed in sitemap.xml point to https://iptvsmartproviders.com. Search engines encounter a 308 redirect on every sitemap crawl.",
+          "recommendation": "Change baseUrl in app/sitemap.ts and app/robots.ts to use the canonical www host."
+        },
+        {
+          "title": "Missing security.txt Discovery File",
+          "severity": "Low",
+          "description": "RFC 9116 security.txt is absent, triggering an alert in Cloudflare Security Insights.",
+          "recommendation": "Add public/.well-known/security.txt with contact details and encryption keys."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
+      "score": 88,
+      "what_works": [
+        "Comprehensive knowledge base with 63 dedicated articles",
+        "Pillar post 'best-iptv-canada.md' scores 93/100 quality with 0 filler and 0.83 information density",
+        "Deep troubleshooting and hardware guides for Canadian users"
+      ],
+      "findings": [
+        {
+          "title": "Outdated Year References in Legacy URLs",
+          "severity": "Medium",
+          "description": "Several legacy posts reference 2024 and 2025 in titles and slugs, dampening CTR for users searching for current 2026 providers.",
+          "recommendation": "Update H1s and title tags to emphasize 2026 reviews, with internal redirects maintaining link equity."
+        },
+        {
+          "title": "Generic Author Credentials in Metadata",
+          "severity": "Medium",
+          "description": "Blog posting schemas reference 'IPTV Canada' without named authors or industry verification bios.",
+          "recommendation": "Introduce author profiles with specialized streaming technology credentials to reinforce E-E-A-T."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 92,
+      "what_works": [
+        "Homepage title and meta description optimized with Canadian geo-modifiers and year tokens",
+        "Clean heading outline with 1 H1, 10 H2s, and 18 H3s",
+        "Dynamic OpenGraph and Twitter cards generated with custom SVG/PNG images"
+      ],
+      "findings": [
+        {
+          "title": "H1 Spacing Rendering Artifact",
+          "severity": "Low",
+          "description": "The homepage H1 contains a <br /> tag without spacing, rendering in text extractors as 'Best IPTV CanadaService In 2026'.",
+          "recommendation": "Add a space before or after the break tag in Hero.tsx."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 90,
+      "what_works": [
+        "Organization and WebSite SearchAction schemas configured",
+        "Product schema with Offer tiers in CAD currency",
+        "FAQPage schema and BreadcrumbList structured data implemented",
+        "LocalService schema on all 10 Canadian city landing pages"
+      ],
+      "findings": [
+        {
+          "title": "Schema Target URLs Point to Non-Canonical Host",
+          "severity": "Medium",
+          "description": "Organization, WebSite, and Offer schema URLs use apex domain rather than canonical www domain.",
+          "recommendation": "Update URL properties in lib/schemas.ts to use canonical domain."
+        }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 86,
+      "what_works": [
+        "Zero CLS from Next.js self-hosted Google Fonts",
+        "Cloudflare edge caching and Zstandard HTTP compression",
+        "Lightweight DOM footprint with Next.js Turbopack build optimization"
+      ],
+      "findings": [
+        {
+          "title": "Third-Party Unsplash Image Optimization",
+          "severity": "Medium",
+          "description": "Hero section pulls imagery from Unsplash; ensure next/image sizes attributes match mobile breakpoints to prevent over-fetching.",
+          "recommendation": "Review responsive sizes attributes on external images."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 94,
+      "what_works": [
+        "public/llms.txt file is already active and structured per standards",
+        "Clear bullet-pointed feature matrices and pricing tables",
+        "Structured FAQ data ready for LLM retrieval"
+      ],
+      "findings": [
+        {
+          "title": "llms.txt Canonical URL Mismatch",
+          "severity": "Low",
+          "description": "Canonical URL in llms.txt points to apex domain instead of www.",
+          "recommendation": "Update canonical URL in public/llms.txt to https://www.iptvsmartproviders.com."
+        }
+      ]
+    },
+    {
+      "name": "Local SEO (Canada)",
+      "score": 92,
+      "what_works": [
+        "10 targeted city landing pages (Toronto, Vancouver, Montreal, Calgary, Ottawa, etc.)",
+        "Local ISP references (Bell Fibe, Rogers Ignite, Telus, Shaw)",
+        "Local sports team tie-ins (Maple Leafs, Canucks, Oilers, Flames)"
+      ],
+      "findings": [
+        {
+          "title": "City Landing Page Internal Link Expansion",
+          "severity": "Low",
+          "description": "City landing pages are currently linked mainly in the footer. Contextual links in blog posts would enhance geographic relevance.",
+          "recommendation": "Add contextual links to city pages in Canadian internet provider and regional sports guides."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Technical Fixes (Immediate)",
+        "timeframe": "Day 1 - 2",
+        "items": [
+          "Standardize canonical host: Update config/site.ts and app/layout.tsx to www.iptvsmartproviders.com",
+          "Regenerate sitemap.xml with www.iptvsmartproviders.com URLs to eliminate 308 redirects",
+          "Fix robots.txt Sitemap directive to point to www sitemap",
+          "Create public/.well-known/security.txt to clear Cloudflare Security Insights"
+        ]
+      },
+      {
+        "name": "Phase 2: On-Page & Schema Alignment",
+        "timeframe": "Week 1",
+        "items": [
+          "Update all schema generators in lib/schemas.ts to canonical www domain",
+          "Fix spacing in homepage H1 header in Hero.tsx",
+          "Update public/llms.txt canonical URL to www host"
+        ]
+      },
+      {
+        "name": "Phase 3: Content Freshness & E-E-A-T Elevation",
+        "timeframe": "Weeks 2 - 3",
+        "items": [
+          "Audit and update legacy 2024/2025 blog titles to 2026",
+          "Add structured author bio cards to blog posts to elevate E-E-A-T",
+          "Insert internal links from Canadian sports guides to corresponding city landing pages"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Ongoing SEO Governance",
+        "timeframe": "Monthly",
+        "items": [
+          "Monitor Google Search Console indexation for www migration stabilization",
+          "Run claude-seo drift comparison on deployments to guard against SEO regressions",
+          "Track Core Web Vitals field data via Vercel Speed Insights"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

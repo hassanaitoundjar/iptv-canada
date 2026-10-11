@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "IPTV Canada",
   description: "Discover the best Canadian IPTV service for premium entertainment. Stream your favorite shows and movies in stunning 4K quality.",
-  url: "https://iptvsmartproviders.com",
+  url: "https://www.iptvsmartproviders.com",
   trialUrl: "/free-trial",
   supportEmail: "support@iptvsmartproviders.com",
   whatsapp: "+1 (757) 957-5093",

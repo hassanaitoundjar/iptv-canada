@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://iptvsmartproviders.com'),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: 'IPTV Canada — #1 Premium IPTV Subscription in Canada 2026',
     template: '%s | IPTV Canada'
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_CA',
-    url: 'https://iptvsmartproviders.com',
+    url: siteConfig.url,
     siteName: 'IPTV Canada',
     title: 'IPTV Canada | 2026 premium IPTV service With 24h Free Trial',
     description: "Premium Canadian IPTV service. 25k+ channels, 4K streaming, 24/7 support.",
@@ -62,10 +62,10 @@ export const metadata: Metadata = {
     images: ['/og?title=IPTV Canada | 2026 premium IPTV service With 24h Free Trial'],
   },
   alternates: {
-    canonical: 'https://iptvsmartproviders.com',
+    canonical: siteConfig.url,
     languages: {
-      'en-CA': 'https://iptvsmartproviders.com',
-      'en-US': 'https://iptvsmartproviders.com',
+      'en-CA': siteConfig.url,
+      'en-US': siteConfig.url,
     },
   },
   verification: {
@@ -93,8 +93,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "IPTV Canada",
-              "url": "https://iptvsmartproviders.com",
-              "logo": "https://iptvsmartproviders.com/logo.png",
+              "url": siteConfig.url,
+              "logo": `${siteConfig.url}/logo.png`,
               "telephone": siteConfig.whatsapp,
               "email": "support@iptvsmartproviders.com",
               "contactPoint": {
@@ -119,10 +119,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "IPTV Canada",
-              "url": "https://iptvsmartproviders.com",
+              "url": siteConfig.url,
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://iptvsmartproviders.com/blog?q={search_term_string}",
+                "target": `${siteConfig.url}/blog?q={search_term_string}`,
                 "query-input": "required name=search_term_string"
               }
             })

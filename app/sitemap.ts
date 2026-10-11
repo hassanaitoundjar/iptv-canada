@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
 import { cities } from '@/constants/city-pages'
 import { getAllBlogPosts } from '@/constants/blog-posts'
+import { siteConfig } from '@/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://iptvsmartproviders.com'
+  const baseUrl = siteConfig.url
   const today = new Date().toISOString()
 
   const staticRoutes = [
