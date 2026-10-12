@@ -122,7 +122,6 @@ const nextConfig: NextConfig = {
       { source: "/iptv-smarters-pro-mobile-guide-2025", destination: "/blog", permanent: true },
       { source: "/iptv-for-seniors-complete-guide-2025", destination: "/blog", permanent: true },
       { source: "/download", destination: "/tutorial", permanent: true },
-      { source: "/faq", destination: "/about", permanent: true },
       { source: "/smart-tv", destination: "/tutorial", permanent: true },
       { source: "/android-tv", destination: "/tutorial", permanent: true },
       { source: "/fire-stick", destination: "/tutorial", permanent: true },
