@@ -1,0 +1,19 @@
+# Google Search Console Disavow File for iptvsmartproviders.com
+# Generated: 2026-10-12
+# Purpose: Disavow toxic PBN anchor blast and high spam score linking domains
+# Upload at: https://search.google.com/search-console/disavow-links
+
+# 1. Automated PBN network domains (identified from Moz anchor text analysis)
+domain:maxibeats.xyz
+domain:vevotube.xyz
+domain:gigsa.xyz
+domain:nashr.xyz
+domain:fajilak.xyz
+domain:coupliv.fit
+
+# 2. Unrelated domains with high Moz spam scores (>25% or gambling/casino)
+domain:plumeriamarketing.com
+domain:lydiaroyrealestate.com
+domain:lawyerinjeddah.com
+domain:bestnz-poker-casinoslot.com
+domain:casinooftheking.com

@@ -13,7 +13,7 @@ tags:
   - iptv-premier-league
   - sports-streaming-2026
 metadata:
-  canonical: https://iptvsmartproviders.comhow-to-watch-live-sports-with-iptv-2026
+  canonical: https://iptvsmartproviders.com/how-to-watch-live-sports-with-iptv-2026
 ---
 
 # How to Watch Live Sports with IPTV 2026: Complete Guide

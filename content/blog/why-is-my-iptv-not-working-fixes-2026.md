@@ -5,7 +5,7 @@ category: "Guides"
 excerpt: "Experiencing buffering, freezing, or login issues? Here are the most common causes and fixes for IPTV problems in Canada."
 featured: false
 readTime: "8 min read"
-canonical: "https://iptvsmartproviders.comblog/why-is-my-iptv-not-working-fixes-2026"
+canonical: "https://iptvsmartproviders.com/blog/why-is-my-iptv-not-working-fixes-2026"
 ---
 
 Nothing is more frustrating than settling in to watch the big game, only to find that your IPTV stream is buffering, freezing, or simply won't load at all. 

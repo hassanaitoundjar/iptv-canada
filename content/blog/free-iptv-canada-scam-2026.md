@@ -5,7 +5,7 @@ category: "Guides"
 excerpt: "Are free IPTV services in Canada worth the risk? We break down the reality of free IPTV lists, buffering issues, and scams."
 featured: false
 readTime: "7 min read"
-canonical: "https://iptvsmartproviders.comblog/free-iptv-canada-scam-2026"
+canonical: "https://iptvsmartproviders.com/blog/free-iptv-canada-scam-2026"
 ---
 
 Everyone loves free stuff. So when you search for "Free IPTV Canada" and find websites offering endless M3U playlists and thousands of channels for zero dollars, it's tempting to jump right in.

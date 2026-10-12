@@ -11,7 +11,7 @@ tags:
   - troubleshooting
   - streaming-issues
 metadata:
-  canonical: https://iptvsmartproviders.comhow-to-fix-iptv-buffering-issues-complete-troubleshooting-guide
+  canonical: https://iptvsmartproviders.com/how-to-fix-iptv-buffering-issues-complete-troubleshooting-guide
 ---
 
 # How to Fix IPTV Buffering Issues - Complete Troubleshooting Guide 2024

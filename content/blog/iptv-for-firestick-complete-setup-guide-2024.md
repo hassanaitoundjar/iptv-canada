@@ -13,7 +13,7 @@ tags:
   - installation
   - amazon-fire-tv
 metadata:
-  canonical: https://iptvsmartproviders.comiptv-for-firestick-complete-setup-guide-2024
+  canonical: https://iptvsmartproviders.com/iptv-for-firestick-complete-setup-guide-2024
 ---
 
 # IPTV for Firestick - Complete Setup Guide 2024

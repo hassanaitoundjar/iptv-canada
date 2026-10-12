@@ -4,11 +4,11 @@ export function getWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "IPTV Canada",
-    "url": "https://www.iptvsmartproviders.com",
+    "url": "https://iptvsmartproviders.com",
     "potentialAction": {
       "@type": "SearchAction",
       // Points to /blog?q= — the only search-like page on the site
-      "target": "https://iptvsmartproviders.comblog?q={search_term_string}",
+      "target": "https://iptvsmartproviders.com/blog?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -20,9 +20,9 @@ export function getOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "IPTV Canada",
-    "url": "https://www.iptvsmartproviders.com",
+    "url": "https://iptvsmartproviders.com",
     // Standardized to /logo.png — the file that actually exists in /public
-    "logo": "https://iptvsmartproviders.comlogo.png",
+    "logo": "https://iptvsmartproviders.com/logo.png",
     "description": "Premium Canadian IPTV service. 25,000+ live channels, 120,000+ VODs, 4K streaming, 24/7 Canadian support.",
     "telephone": "+1 (757) 957-5093",
     "email": "support@iptvsmartproviders.com",
@@ -64,8 +64,8 @@ export function getServiceSchema() {
       "name": "IPTV Canada"
     },
     "description": "Premium IPTV subscription with 25,000+ live channels, 120,000+ VOD, 4K quality for Canadian viewers.",
-    "image": "https://iptvsmartproviders.comlogo.png",
-    "url": "https://www.iptvsmartproviders.com",
+    "image": "https://iptvsmartproviders.com/logo.png",
+    "url": "https://iptvsmartproviders.com",
     "offers": [
       {
         "@type": "Offer",
@@ -73,7 +73,7 @@ export function getServiceSchema() {
         "price": "19",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://iptvsmartproviders.compricing",
+        "url": "https://iptvsmartproviders.com/pricing",
         "priceValidUntil": "2027-12-31"
       },
       {
@@ -82,7 +82,7 @@ export function getServiceSchema() {
         "price": "29",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://iptvsmartproviders.compricing",
+        "url": "https://iptvsmartproviders.com/pricing",
         "priceValidUntil": "2027-12-31"
       },
       {
@@ -91,7 +91,7 @@ export function getServiceSchema() {
         "price": "49",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://iptvsmartproviders.compricing",
+        "url": "https://iptvsmartproviders.com/pricing",
         "priceValidUntil": "2027-12-31"
       },
       {
@@ -100,7 +100,7 @@ export function getServiceSchema() {
         "price": "79",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://iptvsmartproviders.compricing",
+        "url": "https://iptvsmartproviders.com/pricing",
         "priceValidUntil": "2027-12-31"
       }
     ]
@@ -119,7 +119,7 @@ export function getLocalServiceSchema(city: string, provinceCode: string, url: s
     "provider": {
       "@type": "Organization",
       "name": "IPTV Canada",
-      "url": "https://www.iptvsmartproviders.com"
+      "url": "https://iptvsmartproviders.com"
     },
     "areaServed": {
       "@type": "City",
@@ -199,15 +199,15 @@ export function getBlogPostSchema(post: {
       "@type": "Person",
       "name": post.authorName,
       // Author URL improves E-E-A-T — links to an author bio page
-      "url": post.authorUrl ?? "https://iptvsmartproviders.comabout",
-      "sameAs": ["https://iptvsmartproviders.comabout"]
+      "url": post.authorUrl ?? "https://iptvsmartproviders.com/about",
+      "sameAs": ["https://iptvsmartproviders.com/about"]
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPTV Canada",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://iptvsmartproviders.comlogo.png"
+        "url": "https://iptvsmartproviders.com/logo.png"
       }
     },
     "image": post.image,

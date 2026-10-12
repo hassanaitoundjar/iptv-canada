@@ -11,7 +11,7 @@ tags:
   - smart-tv
   - installation
 metadata:
-  canonical: https://iptvsmartproviders.comhow-to-install-iptv-smarters-pro-samsung-lg-smart-tv
+  canonical: https://iptvsmartproviders.com/how-to-install-iptv-smarters-pro-samsung-lg-smart-tv
 ---
 
 # How to Install and Use IPTV Smarters Pro on Samsung Smart TV and LG Smart TV

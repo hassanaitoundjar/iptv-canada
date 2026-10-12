@@ -13,7 +13,7 @@ tags:
   - nvidia-shield-iptv
   - cord-cutting
 metadata:
-  canonical: https://iptvsmartproviders.combest-iptv-for-android-tv-box-2026
+  canonical: https://iptvsmartproviders.com/best-iptv-for-android-tv-box-2026
 ---
 
 # Best IPTV for Android TV Box 2026: Top 5 Tested & Ranked

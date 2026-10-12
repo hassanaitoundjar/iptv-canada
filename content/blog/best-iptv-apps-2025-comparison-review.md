@@ -13,7 +13,7 @@ tags:
   - best-iptv-app
   - iptv-review
 metadata:
-  canonical: https://iptvsmartproviders.combest-iptv-apps-2026-comparison-review
+  canonical: https://iptvsmartproviders.com/best-iptv-apps-2026-comparison-review
 ---
 
 # 10 Best IPTV Apps in 2026 - Complete Comparison & Review

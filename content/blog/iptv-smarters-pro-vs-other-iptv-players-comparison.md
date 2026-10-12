@@ -12,7 +12,7 @@ tags:
   - comparison
   - streaming
 metadata:
-  canonical: https://iptvsmartproviders.comiptv-smarters-pro-vs-other-iptv-players-comparison
+  canonical: https://iptvsmartproviders.com/iptv-smarters-pro-vs-other-iptv-players-comparison
 ---
 
 # IPTV Smarters Pro vs Other IPTV Players - Complete Comparison 2024
