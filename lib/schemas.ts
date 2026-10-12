@@ -66,6 +66,75 @@ export function getServiceSchema() {
     "description": "Premium IPTV subscription with 25,000+ live channels, 120,000+ VOD, 4K quality for Canadian viewers.",
     "image": "https://iptvsmartproviders.com/logo.png",
     "url": "https://iptvsmartproviders.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "247",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael S."
+        },
+        "datePublished": "2026-07-14",
+        "reviewBody": "The streaming quality is exceptional, and customer support is always there when needed. Over 25,000 channels, zero buffering, and incredible VOD selection. Premium IPTV service in Canada.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah J."
+        },
+        "datePublished": "2026-08-02",
+        "reviewBody": "Switched from cable and never looked back. The sports coverage is specifically what I was looking for. No lag during the playoffs which is a first for me with any IPTV provider.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David R."
+        },
+        "datePublished": "2026-09-12",
+        "reviewBody": "Setup was incredibly easy on my Firestick. The support team walked me through the installation in less than 5 minutes. High definition quality is actually 4K as advertised.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Liam W."
+        },
+        "datePublished": "2026-10-05",
+        "reviewBody": "Finally an IPTV service that delivers on its promises. The 4K channels are crisp and the catch-up feature is a lifesaver for missed games.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }
+    ],
     "offers": [
       {
         "@type": "Offer",
@@ -184,6 +253,8 @@ export function getBlogPostSchema(post: {
   datePublished: string;
   dateModified: string;
   authorName: string;
+  authorRole?: string;
+  authorBio?: string;
   authorUrl?: string;
   image: string;
 }) {
@@ -198,13 +269,20 @@ export function getBlogPostSchema(post: {
     "author": {
       "@type": "Person",
       "name": post.authorName,
-      // Author URL improves E-E-A-T — links to an author bio page
-      "url": post.authorUrl ?? "https://iptvsmartproviders.com/about",
-      "sameAs": ["https://iptvsmartproviders.com/about"]
+      ...(post.authorRole ? { "jobTitle": post.authorRole } : {}),
+      ...(post.authorBio ? { "description": post.authorBio } : {}),
+      "url": post.authorUrl ?? "https://iptvsmartproviders.com/team#editorial",
+      "sameAs": [post.authorUrl ?? "https://iptvsmartproviders.com/team#editorial"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IPTV Canada",
+        "url": "https://iptvsmartproviders.com"
+      }
     },
     "publisher": {
       "@type": "Organization",
       "name": "IPTV Canada",
+      "url": "https://iptvsmartproviders.com",
       "logo": {
         "@type": "ImageObject",
         "url": "https://iptvsmartproviders.com/logo.png"

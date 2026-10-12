@@ -20,5 +20,6 @@ export const siteConfig = {
   verification: {
     google: "1DoiR3LaJz2t1RWqRYRsM9fUtZd_ca-pmrpsqPzGJXo",
     bing: "C599E88324F1BF23B219798A653D00D7",
+    indexNow: "a7b8e9f0c1d2e3f4a5b6c7d8e9f0a1b2",
   },
 };

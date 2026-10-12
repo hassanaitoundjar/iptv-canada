@@ -8,6 +8,7 @@ import { safeJsonLd } from "@/lib/safe-json-ld";
 import { getBlogPostSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import { AuthorBio } from "@/components/shared/AuthorBio";
 import { BlogCta } from "@/components/shared/BlogCta";
+import { CityCoverageGrid } from "@/components/shared/CityCoverageGrid";
 import { getAuthor } from "@/constants/authors";
 import { siteConfig } from "@/config/site";
 
@@ -82,6 +83,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     datePublished: post.date,
     dateModified: post.updated || post.date,
     authorName: author.name,
+    authorRole: author.role,
+    authorBio: author.bio,
     authorUrl: `${siteConfig.url}${author.url}`,
     image: `${siteConfig.url}/og?title=${encodeURIComponent(post.title)}&date=${encodeURIComponent(post.date)}`
   });
@@ -356,6 +359,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </nav>
         )}
+
+        {/* Canadian Regional Coverage — internal linking to city landing hubs */}
+        <CityCoverageGrid />
       </article>
     </main>
   );
