@@ -1,0 +1,35 @@
+{
+  "classification": {
+    "kind": "generic",
+    "displayName": "--help",
+    "rootDir": "/home/laradev/Projects/iptv-canada/--help",
+    "technologies": [],
+    "entryPoints": [],
+    "keyDirectories": {},
+    "packageManager": "unknown",
+    "isMonorepo": false,
+    "packages": [],
+    "confidence": 0.95
+  },
+  "nodes": [],
+  "edges": [],
+  "routes": [],
+  "diagnostics": [],
+  "stats": {
+    "totalFiles": 0,
+    "totalNodes": 0,
+    "totalEdges": 0,
+    "totalRoutes": 0,
+    "totalDiagnostics": 0,
+    "scanDurationMs": 0,
+    "analyzedAt": "2026-10-18T08:37:22.570Z"
+  },
+  "coveragePercent": 0,
+  "testCoverage": {
+    "hasReport": false,
+    "testFilesCount": 0,
+    "totalFilesCount": 0,
+    "coveredFilesCount": 0
+  },
+  "analysisState": "ready"
+}
