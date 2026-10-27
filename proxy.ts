@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+// ─── Environment Configuration ────────────────────────────────────────────────
+const API_URL = process.env.RANKPULSE_API_URL || "https://rankpluse.demo.shiptemplates.com";
+const API_KEY = process.env.RANKPULSE_API_KEY || process.env.RANKMATH_API_KEY;
+
 // ─── Rate limit store (replace with Upstash Redis in production) ──────────────
 const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_WINDOW_MS = 60_000;
@@ -29,8 +33,8 @@ function isRateLimited(key: string): boolean {
   return entry.count > RATE_LIMIT_MAX;
 }
 
-// ─── Middleware ────────────────────────────────────────────────────────────────
-export async function middleware(request: NextRequest) {
+// ─── Proxy (Next.js 16) ────────────────────────────────────────────────────────
+export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
   // ── Block specific countries ────────────────────────────────────────────────
@@ -60,33 +64,49 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // ── Edge redirects & SEO synchronization (RankPluse / RankMath) ─────────────
-  try {
-    const res = await fetch(
-      `https://rankpluse.demo.shiptemplates.com/api/v1/client/check-redirect?path=${encodeURIComponent(pathname)}&search=${encodeURIComponent(search)}`,
-      {
-        headers: {
-          "x-rankmath-api-key": process.env.RANKMATH_API_KEY || "rm_live_nmomnk2j7l1exoorz8nsdfwy",
-        },
-        cache: "no-store",
-      }
-    );
+  // ── Edge redirects & SEO synchronization (RankPulse / RankMath) ─────────────
+  if (API_KEY) {
+    try {
+      const res = await fetch(
+        `${API_URL}/api/v1/client/check-redirect?path=${encodeURIComponent(pathname)}&search=${encodeURIComponent(search)}`,
+        {
+          headers: {
+            "x-rankpulse-api-key": API_KEY,
+            "x-rankmath-api-key": API_KEY,
+          },
+          signal: AbortSignal.timeout(800), // 800ms fail-open timeout
+          cache: "no-store",
+        }
+      );
 
-    if (res.ok) {
-      const data = await res.json();
-      if (data.redirect && data.targetUrl) {
-        const dest = data.targetUrl.startsWith("http")
-          ? data.targetUrl
-          : new URL(data.targetUrl, request.url).toString();
-        return NextResponse.redirect(dest, { status: data.statusCode || 301 });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.redirect) {
+          // Handle 410 Gone and 451 Unavailable for Legal Reasons without throwing in redirect()
+          if (data.statusCode === 410 || data.statusCode === 451) {
+            return new NextResponse(data.statusCode === 410 ? "Gone" : "Unavailable For Legal Reasons", {
+              status: data.statusCode,
+            });
+          }
+
+          if (data.targetUrl) {
+            const dest = data.targetUrl.startsWith("http")
+              ? data.targetUrl
+              : new URL(data.targetUrl, request.url).toString();
+            return NextResponse.redirect(dest, { status: data.statusCode || 301 });
+          }
+        }
       }
+    } catch {
+      // Fail-open: application continues without delay if edge check fails or times out
     }
-  } catch {
-    // Fail-open: application continues without delay if SaaS times out
   }
 
   return NextResponse.next();
 }
+
+// For Next.js 15 and earlier compatibility
+export const middleware = proxy;
 
 export const config = {
   matcher: [
