@@ -35,7 +35,7 @@ export async function middleware(request: NextRequest) {
 
   // ── Block specific countries ────────────────────────────────────────────────
   const country = request.headers.get("x-vercel-ip-country") ?? request.headers.get("cf-ipcountry");
-  
+
   if (country === "SG") {
     return new NextResponse("Access Denied", { status: 403 });
   }
@@ -48,7 +48,7 @@ export async function middleware(request: NextRequest) {
       return new NextResponse("Too Many Requests", {
         status: 429,
         headers: {
-          "Retry-After":  "60",
+          "Retry-After": "60",
           "Content-Type": "text/plain",
         },
       });
